@@ -51,7 +51,7 @@ export const organizationSchema = {
   name: SITE_CONFIG.company.name,
   legalName: SITE_CONFIG.company.legalName,
   url: SITE_CONFIG.url,
-  logo: `${SITE_CONFIG.url}/logo.png`,
+  logo: `${SITE_CONFIG.url}/logo.svg`,
   email: SITE_CONFIG.company.email,
   address: {
     "@type": "PostalAddress",
