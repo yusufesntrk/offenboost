@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Home, ArrowLeft } from "lucide-react";
+import SEO from "@/components/SEO";
+import { PAGE_SEO } from "@/lib/seo-config";
 
 const NotFound = () => {
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-4">
+      <SEO
+        title={PAGE_SEO.notFound.title}
+        description={PAGE_SEO.notFound.description}
+        noindex={true}
+      />
       <div className="text-center max-w-md">
         <div className="text-8xl font-bold gradient-text mb-4">404</div>
         <h1 className="text-2xl font-bold text-foreground mb-4">

@@ -1,9 +1,17 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import SEO from "@/components/SEO";
+import { PAGE_SEO } from "@/lib/seo-config";
 
 const Impressum = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={PAGE_SEO.impressum.title}
+        description={PAGE_SEO.impressum.description}
+        canonical="/impressum"
+        noindex={true}
+      />
       <Navbar />
       <main className="py-12 md:py-20 px-4 md:px-8">
         <div className="max-w-3xl mx-auto">

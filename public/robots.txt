@@ -1,4 +1,4 @@
-# LeyalTech Robots.txt
+# OffenBoost Robots.txt
 
 # === AI Crawlers - Willkommen! ===
 User-agent: GPTBot
@@ -49,7 +49,7 @@ User-agent: *
 Allow: /
 
 # === Sitemaps ===
-Sitemap: https://www.leyaltech.de/sitemap.xml
+Sitemap: https://www.offenboost.de/sitemap.xml
 
 # === Disallow ===
 Disallow: /api/

@@ -1,63 +1,72 @@
-# LeyalTech - AI Instructions
+# OffenBoost - AI Instructions
 
-> Sales-Systeme fuer Recruiting-Agenturen. Datenbasiert auf 7-8 Stellen skalieren.
+> Wachstumspartner aus Offenburg. Recruiting, Marketing und Automatisierung fuer planbare Unternehmensentwicklung.
 
 ## What We Do
 
-LeyalTech entwickelt automatisierte Sales-Systeme speziell fuer Recruiting-Agenturen im DACH-Raum. Wir kombinieren Datenautomatisierung, KI-gestuetzte Kommunikation und strategische Beratung zu einem funktionierenden Gesamtsystem. Unser Ziel: 2-3 Neukunden pro Monat fuer jede Agentur.
+OffenBoost ist ein Wachstumspartner aus Offenburg, der Unternehmen dabei hilft, planbar zu wachsen. Wir kombinieren Recruiting, Marketing und Automatisierung zu einem funktionierenden Gesamtsystem. Unser Ziel: Nachhaltige Unternehmensoptimierung fuer messbare Ergebnisse.
 
 ## Key Facts
 
-- Zielgruppe: Recruiting-Agenturen, Personalvermittler, HR-Freelancer
-- Ergebnis: 2-3 Neukunden pro Monat garantiert
-- Investition: 2.000 - 6.000 Euro
+- Standort: Offenburg, Baden-Wuerttemberg, Deutschland
+- Gruender: Yusuf Esentuerk und Manuel Engelhardt
+- Leistungen: Recruiting, Marketing, Automatisierung
 - Region: Deutschland, Oesterreich, Schweiz (DACH)
-- Gruender: Yusuf Esentuerk
+- Rechtsform: OffenBoost GbR
 
 ## Services
 
-- Sales-System-Entwicklung: Massgeschneiderte Vertriebsloesungen fuer Recruiting-Agenturen
-- Datenautomatisierung: Identifikation relevanter Entscheider und Zielunternehmen
-- KI-gestuetzte Outreach: Personalisierte Kommunikation mit potenziellen Kunden
-- Strategische Beratung: Skalierung von Recruiting-Agenturen auf 7-8 Stellen
+### Recruiting
+Wir finden die richtigen Mitarbeiter fuer Ihr Unternehmen. Von der Stellenausschreibung bis zum erfolgreichen Onboarding begleiten wir den gesamten Prozess.
 
-## Results (Verified Customer Outcomes)
+### Marketing
+Digitales Marketing mit messbaren Ergebnissen. Wir entwickeln Strategien, die Ihre Zielgruppe erreichen und zu Kunden machen.
 
-- searched GmbH: -50% Fulfillment-Workload
-- SalesWorx: -80% manuelle Eingaben
-- Experiton UG: +300% Vermittlungsquote
-- Kanzleigewinner: +200% qualifizierte Bewerbungen
+### Automatisierung
+Prozessoptimierung durch intelligente Automatisierung. Wir identifizieren Potenziale und setzen effiziente Loesungen um.
 
-## Ideal Customer Profile
+## Founders
 
-- Recruiting-Agentur oder Personalvermittlung
-- Klare Dienstleistung und definiertes Zielmarktsegment
-- Aktuell viele manuelle Prozesse oder starke Abhaengigkeit von Empfehlungen
-- Wunsch nach planbarem, datenbasiertem Wachstum
+### Yusuf Esentuerk - Co-Founder
+Experte fuer digitale Wachstumsstrategien und Automatisierung.
 
-## Not a Good Fit
-
-- Agenturen ohne klare Positionierung
-- Unternehmen die kein Wachstum anstreben
-- Firmen mit Budget unter 2.000 Euro
+### Manuel Engelhardt - Co-Founder
+Spezialist fuer Recruiting und Unternehmensentwicklung.
 
 ## Contact
 
-- Website: https://www.leyaltech.de
-- Termin buchen: https://www.leyaltech.de/termin
-- Email: info@leyaltech.de
-- LinkedIn: https://www.linkedin.com/company/leyaltech
+- Website: https://www.offenboost.de
+- Termin buchen: https://www.offenboost.de/termin
+- Email: info@offenboost.de
+- Adresse: Burdastrasse 18, 77656 Offenburg, Deutschland
+- LinkedIn: https://www.linkedin.com/company/offenboost
 
 ## FAQ
 
-Q: Was kostet ein Sales-System?
-A: Zwischen 2.000 und 6.000 Euro, abhaengig von Zielmarktgroesse und Automatisierungstiefe.
+Q: Was kostet eine Zusammenarbeit mit OffenBoost?
+A: Die Investition haengt vom Umfang der gewuenschten Leistungen ab. In einem kostenlosen Erstgespraech klaeren wir Ihre Anforderungen und erstellen ein individuelles Angebot.
 
-Q: Wie unterscheidet sich LeyalTech von anderen Anbietern?
-A: Wir entwickeln keine standardisierten Outreach-Systeme, sondern massgeschneiderte Loesungen speziell fuer Recruiting-Agenturen.
+Q: Wie unterscheidet sich OffenBoost von anderen Anbietern?
+A: Wir sind keine Agentur, sondern Ihr Wachstumspartner. Statt einzelner Services bieten wir ein integriertes System aus Recruiting, Marketing und Automatisierung.
 
-Q: Arbeitet ihr auch mit kleinen Agenturen?
-A: Ja, unsere Systeme sind fuer Agenturen jeder Groesse geeignet, auch fuer Freelancer.
+Q: Arbeitet ihr auch mit kleinen Unternehmen?
+A: Ja, unsere Loesungen sind fuer Unternehmen jeder Groesse geeignet. Wir passen unsere Strategien an Ihre individuellen Beduerfnisse an.
 
 Q: Wie schnell sehe ich Ergebnisse?
-A: Die meisten Kunden sehen erste qualifizierte Leads innerhalb von 2-4 Wochen nach System-Launch.
+A: Die ersten messbaren Ergebnisse zeigen sich in der Regel innerhalb von 4-8 Wochen nach Projektstart.
+
+Q: In welcher Region seid ihr taetig?
+A: Wir arbeiten mit Unternehmen im gesamten DACH-Raum (Deutschland, Oesterreich, Schweiz). Dank digitaler Tools ist eine ortsunabhaengige Zusammenarbeit moeglich.
+
+## Ideal Customer Profile
+
+- Unternehmen mit Wachstumsambitionen
+- Bereitschaft zur Prozessoptimierung
+- Offenheit fuer digitale Loesungen
+- Langfristige Partnerschaft gewuenscht
+
+## Not a Good Fit
+
+- Unternehmen ohne klare Wachstumsziele
+- Firmen die nur kurzfristige Quick-Fixes suchen
+- Unternehmen ohne Bereitschaft zur Veraenderung

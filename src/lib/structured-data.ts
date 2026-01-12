@@ -260,6 +260,36 @@ export const testimonialReviews = [
   },
 ];
 
+// LocalBusiness Schema - für lokale Suchergebnisse
+export const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": `${SITE_CONFIG.url}/#localbusiness`,
+  name: SITE_CONFIG.company.name,
+  description:
+    "Wachstumspartner aus Offenburg für Recruiting, Marketing und Automatisierung.",
+  url: SITE_CONFIG.url,
+  email: SITE_CONFIG.company.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: SITE_CONFIG.company.address.street,
+    addressLocality: SITE_CONFIG.company.address.city,
+    postalCode: SITE_CONFIG.company.address.postalCode,
+    addressCountry: SITE_CONFIG.company.address.country,
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 48.4738,
+    longitude: 7.9447,
+  },
+  areaServed: [
+    { "@type": "Country", name: "Germany" },
+    { "@type": "Country", name: "Austria" },
+    { "@type": "Country", name: "Switzerland" },
+  ],
+  priceRange: "€€",
+};
+
 // Combined schema for homepage (updated with all schemas)
 export const homePageSchemaComplete = {
   "@context": "https://schema.org",
@@ -267,6 +297,7 @@ export const homePageSchemaComplete = {
     organizationSchema,
     websiteSchema,
     serviceSchema,
+    localBusinessSchema,
     founderSchema,
     coFounderSchema,
     bookingHowToSchema,

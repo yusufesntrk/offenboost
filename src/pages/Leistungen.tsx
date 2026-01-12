@@ -13,6 +13,9 @@ import MarketingAnimation from "@/components/animations/MarketingAnimation";
 import SalesAnimation from "@/components/animations/SalesAnimation";
 import WebdevAnimation from "@/components/animations/WebdevAnimation";
 import BeratungAnimation from "@/components/animations/BeratungAnimation";
+import SEO from "@/components/SEO";
+import { PAGE_SEO } from "@/lib/seo-config";
+import { serviceSchema } from "@/lib/structured-data";
 
 const animations = [
   MarketingAnimation,
@@ -87,6 +90,13 @@ const services = [
 const Leistungen = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={PAGE_SEO.leistungen.title}
+        description={PAGE_SEO.leistungen.description}
+        keywords={PAGE_SEO.leistungen.keywords}
+        canonical="/leistungen"
+        structuredData={serviceSchema}
+      />
       <Navbar />
       <main className="py-12 md:py-20 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">

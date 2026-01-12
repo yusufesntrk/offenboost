@@ -2,6 +2,9 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Check, Calendar, Clock, Video } from "lucide-react";
 import { useEffect } from "react";
+import SEO from "@/components/SEO";
+import { PAGE_SEO } from "@/lib/seo-config";
+import { bookingHowToSchema } from "@/lib/structured-data";
 
 const benefits = [
   {
@@ -41,6 +44,13 @@ const Termin = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={PAGE_SEO.termin.title}
+        description={PAGE_SEO.termin.description}
+        keywords={PAGE_SEO.termin.keywords}
+        canonical="/termin"
+        structuredData={bookingHowToSchema}
+      />
       <Navbar />
       <main className="py-12 md:py-20 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">

@@ -9,10 +9,20 @@ import TestimonialsSection from "@/components/home/TestimonialsSection";
 import StepsSection from "@/components/home/StepsSection";
 import FAQSection from "@/components/home/FAQSection";
 import CTASection from "@/components/home/CTASection";
+import SEO from "@/components/SEO";
+import { PAGE_SEO } from "@/lib/seo-config";
+import { homePageSchemaComplete } from "@/lib/structured-data";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={PAGE_SEO.home.title}
+        description={PAGE_SEO.home.description}
+        keywords={PAGE_SEO.home.keywords}
+        canonical="/"
+        structuredData={homePageSchemaComplete}
+      />
       <Navbar />
       <main>
         <HeroSection />

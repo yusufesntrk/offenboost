@@ -10,6 +10,9 @@ import {
   Target,
   Linkedin,
 } from "lucide-react";
+import SEO from "@/components/SEO";
+import { PAGE_SEO } from "@/lib/seo-config";
+import { organizationSchema, founderSchema, coFounderSchema } from "@/lib/structured-data";
 
 const founders = [
   {
@@ -51,9 +54,22 @@ const values = [
   },
 ];
 
+// Combined schema for About page
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [organizationSchema, founderSchema, coFounderSchema],
+};
+
 const UeberUns = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={PAGE_SEO.ueberuns.title}
+        description={PAGE_SEO.ueberuns.description}
+        keywords={PAGE_SEO.ueberuns.keywords}
+        canonical="/ueber-uns"
+        structuredData={aboutPageSchema}
+      />
       <Navbar />
       <main className="py-12 md:py-20 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
