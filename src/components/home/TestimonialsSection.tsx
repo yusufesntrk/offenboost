@@ -260,6 +260,7 @@ const testimonials: Testimonial[] = [
     name: "Ina Neumann",
     role: "Steuerberaterin",
     company: "Steuerkanzlei Neumann",
+    image: "/testimonials/ina-neumann.jpg",
     category: "kanzleien",
     metric: {
       label: "Mandantenanfragen",
@@ -279,6 +280,7 @@ const testimonials: Testimonial[] = [
     name: "Gunther Bartholomä",
     role: "Steuerberater & Rechtsanwalt",
     company: "Bartholomä Kanzlei",
+    image: "/testimonials/gunther-bartholomae.webp",
     category: "kanzleien",
     metric: {
       label: "Mandantenwachstum",
@@ -378,6 +380,7 @@ const testimonials: Testimonial[] = [
     name: "Peter Werner",
     role: "Steuerberater & Partner",
     company: "Werner & Wollscheid",
+    image: "/testimonials/peter-werner.jpg",
     category: "kanzleien",
     metric: {
       label: "Standortwachstum",
@@ -397,6 +400,7 @@ const testimonials: Testimonial[] = [
     name: "Alfred Nelles",
     role: "Steuerberater",
     company: "ETL Nelles & Kollegen",
+    image: "/testimonials/alfred-nelles.jpg",
     category: "kanzleien",
     metric: {
       label: "Mandatswachstum",
@@ -435,6 +439,7 @@ const testimonials: Testimonial[] = [
     name: "Jochen Beck",
     role: "Steuerberater",
     company: "Beck Steuerberatung",
+    image: "/testimonials/jochen-beck.png",
     category: "kanzleien",
     metric: {
       label: "Kanzleiwachstum",
@@ -454,6 +459,7 @@ const testimonials: Testimonial[] = [
     name: "Ulrich Bierhaus",
     role: "Steuerberater & vereid. Buchprüfer",
     company: "Bierhaus & Partner",
+    image: "/testimonials/ulrich-bierhaus.jpg",
     category: "kanzleien",
     metric: {
       label: "Internationale Mandate",
@@ -473,6 +479,7 @@ const testimonials: Testimonial[] = [
     name: "Martin Witte",
     role: "Steuerberater",
     company: "Steuerkanzlei Witte",
+    image: "/testimonials/martin-witte.jpg",
     category: "kanzleien",
     metric: {
       label: "Mandantenwachstum",
