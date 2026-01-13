@@ -386,7 +386,7 @@ const CalendarAnimation = () => {
             <div className="cal-sidebar">
               <div className="cal-mini-calendar">
                 <div className="cal-mini-header">
-                  <span className="cal-mini-month">März</span>
+                  <span className="cal-mini-month">Januar</span>
                   <div>
                     <button className="cal-nav-btn">‹</button>
                     <button className="cal-nav-btn">›</button>
@@ -444,17 +444,17 @@ const CalendarAnimation = () => {
                   <div className="cal-event beruflich" data-order="5">
                     <div className="cal-event-icon">⭕</div>
                     <div className="cal-event-title">Neues Event</div>
-                    <div className="cal-event-time">9 AM - 9 AM</div>
+                    <div className="cal-event-time">9 AM - 10 AM</div>
                   </div>
                   <div className="cal-event beruflich" data-order="12">
                     <div className="cal-event-icon">⭕</div>
                     <div className="cal-event-title">Neues Event</div>
-                    <div className="cal-event-time">10 AM - 10 AM</div>
+                    <div className="cal-event-time">10 AM - 11 AM</div>
                   </div>
                   <div className="cal-event beruflich" data-order="18">
                     <div className="cal-event-icon">⭕</div>
                     <div className="cal-event-title">Neues Event</div>
-                    <div className="cal-event-time">12 PM - 12 PM</div>
+                    <div className="cal-event-time">1 PM - 2 PM</div>
                   </div>
                 </div>
               </div>
@@ -469,7 +469,7 @@ const CalendarAnimation = () => {
                   <div className="cal-event beruflich" data-order="2">
                     <div className="cal-event-icon">⭕</div>
                     <div className="cal-event-title">Neues Event</div>
-                    <div className="cal-event-time">9 AM - 9 AM</div>
+                    <div className="cal-event-time">9 AM - 10 AM</div>
                   </div>
                   <div className="cal-event beruflich" data-order="8">
                     <div className="cal-event-icon">⭕</div>
