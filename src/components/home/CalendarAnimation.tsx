@@ -377,7 +377,7 @@ const CalendarAnimation = () => {
                 <button className="cal-nav-btn">‹</button>
                 <button className="cal-nav-btn">Heute</button>
                 <button className="cal-nav-btn">›</button>
-                <span className="cal-current-date">März 2024</span>
+                <span className="cal-current-date">Januar 2026</span>
               </div>
             </div>
           </div>
