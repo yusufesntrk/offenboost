@@ -431,12 +431,13 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Christian Seifert",
-    company: "Treuhand AG in Berlin",
-    quote: "Seit 1970 sind wir am Markt. Die Digitalisierung unseres Recruitings war der nächste logische Schritt.",
-    headline: "Über 50 Jahre Tradition digital transformiert",
+    company: "KMS Partner",
+    image: "/testimonials/christian-seifert.jpg",
+    quote: "Mit OffenBoost als Wachstumspartner haben wir unser Kanzleiwachstum in Baden-Württemberg neu entfacht.",
+    headline: "Kanzleiwachstum mit digitalem Recruiting",
     category: "kanzleien",
     results: [
-      "Berliner Traditionsunternehmen seit 1970 modernisiert",
+      "Kanzlei in Baden-Württemberg erfolgreich erweitert",
       "Mittelstandsberatung durch qualifizierte Talente gestärkt",
       "120% mehr qualifizierte Bewerbungen generiert",
     ],

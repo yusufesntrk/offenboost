@@ -416,10 +416,11 @@ const testimonials: Testimonial[] = [
     ],
   },
   {
-    quote: "Seit 1970 sind wir am Markt. Mit OffenBoost als Wachstumspartner haben wir unser Wachstum neu entfacht.",
+    quote: "Mit OffenBoost als Wachstumspartner haben wir unser Kanzleiwachstum in Baden-Württemberg neu entfacht.",
     name: "Christian Seifert",
-    role: "Vorstandsvorsitzender",
-    company: "Treuhand AG Berlin",
+    role: "Wirtschaftsprüfer & Steuerberater",
+    company: "KMS Partner",
+    image: "/testimonials/christian-seifert.jpg",
     category: "kanzleien",
     metric: {
       label: "Neumandate",
@@ -430,8 +431,8 @@ const testimonials: Testimonial[] = [
       description: "verdoppelt",
     },
     results: [
-      "Wachstum nach 50+ Jahren Tradition",
-      "Mittelstandsmandanten gewonnen",
+      "Kanzleiwachstum in Baden-Württemberg",
+      "Qualifizierte Mandanten gewonnen",
     ],
   },
   {
