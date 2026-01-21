@@ -266,6 +266,7 @@ const caseStudies: CaseStudy[] = [
   {
     name: "Ina Neumann",
     company: "Steuerkanzlei Neumann",
+    image: "/testimonials/ina-neumann.jpg",
     quote: "Die persönliche Betreuung und die schnelle Umsetzung haben uns überzeugt.",
     headline: "Persönliche Steuerberatung mit modernem Recruiting",
     category: "kanzleien",
