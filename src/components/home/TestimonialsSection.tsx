@@ -300,7 +300,7 @@ const testimonials: Testimonial[] = [
     name: "Dr. Ralf Schauer",
     role: "Geschäftsführer",
     company: "Dr. Schauer Steuerberater",
-    image: "/testimonials/dr-ralf-schauer.png",
+    image: "/testimonials/dr-ralf-schauer.jpg",
     category: "kanzleien",
     metric: {
       label: "Kanzleiwachstum",

@@ -306,7 +306,7 @@ const caseStudies: CaseStudy[] = [
   {
     name: "Dr. Ralf Schauer",
     company: "Dr. Schauer Steuerberater Rechtsanwälte",
-    image: "/testimonials/dr-ralf-schauer.png",
+    image: "/testimonials/dr-ralf-schauer.jpg",
     quote: "Mit über 140 Mitarbeitern brauchen wir einen verlässlichen Partner für unser Recruiting.",
     headline: "Wachstum auf 140+ Mitarbeiter erfolgreich unterstützt",
     category: "kanzleien",
