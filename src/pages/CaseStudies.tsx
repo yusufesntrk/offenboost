@@ -390,6 +390,7 @@ const caseStudies: CaseStudy[] = [
   {
     name: "Peter Werner",
     company: "Werner & Wollscheid Steuerberater",
+    image: "/testimonials/peter-werner.jpg",
     quote: "Die Standorte in Ingelheim und Wiesbaden zu besetzen war eine Herausforderung.",
     headline: "Multi-Standort-Recruiting erfolgreich gemeistert",
     category: "kanzleien",
@@ -410,6 +411,7 @@ const caseStudies: CaseStudy[] = [
   {
     name: "Alfred Nelles",
     company: "ETL Nelles & Kollegen",
+    image: "/testimonials/alfred-nelles.jpg",
     quote: "Als Teil des ETL-Netzwerks haben wir Zugang zu vielen Ressourcen.",
     headline: "ETL-Netzwerk mit regionalem Recruiting verbunden",
     category: "kanzleien",
