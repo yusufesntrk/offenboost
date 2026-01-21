@@ -440,7 +440,7 @@ const testimonials: Testimonial[] = [
     name: "Jochen Beck",
     role: "Steuerberater",
     company: "Beck Steuerberatung",
-    image: "/testimonials/jochen-beck.png",
+    image: "/testimonials/jochen-beck.jpg",
     category: "kanzleien",
     metric: {
       label: "Kanzleiwachstum",

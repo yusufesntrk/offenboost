@@ -453,6 +453,7 @@ const caseStudies: CaseStudy[] = [
   {
     name: "Jochen Beck",
     company: "Beck Steuerberatung",
+    image: "/testimonials/jochen-beck.jpg",
     quote: "In der zweiten Generation unserer Kanzlei setzen wir auf moderne Recruiting-Methoden.",
     headline: "Generationswechsel mit modernem Recruiting begleitet",
     category: "kanzleien",
