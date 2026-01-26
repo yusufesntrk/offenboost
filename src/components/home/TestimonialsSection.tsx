@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
-type Category = "alle" | "recruiting" | "kanzleien";
+type Category = "alle" | "recruiting" | "kanzleien" | "fahrschulen";
 
 interface Testimonial {
   quote: string;
@@ -515,12 +515,34 @@ const testimonials: Testimonial[] = [
       "Langfristige Kundenbeziehungen",
     ],
   },
+  // Fahrschulen
+  {
+    quote: "Mit OffenBoost haben wir nicht nur mehr Fahrschüler gewonnen, sondern auch neue Fahrlehrer für unser Team gefunden.",
+    name: "Thomas Schille",
+    role: "Inhaber",
+    company: "Fahrschule Schille",
+    image: "/testimonials/thomas-schille.png",
+    category: "fahrschulen",
+    metric: {
+      label: "Fahrschüler-Anmeldungen",
+      value: 85,
+      suffix: "%",
+      prefix: "+",
+      direction: "up",
+      description: "gesteigert",
+    },
+    results: [
+      "Mehr Fahrschüler durch digitale Präsenz",
+      "Neue Fahrlehrer erfolgreich eingestellt",
+    ],
+  },
 ];
 
 const categories: { key: Category; label: string }[] = [
   { key: "alle", label: "Alle" },
   { key: "recruiting", label: "Recruiting" },
   { key: "kanzleien", label: "Kanzleien" },
+  { key: "fahrschulen", label: "Fahrschulen" },
 ];
 
 // Animated Counter Component

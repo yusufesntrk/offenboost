@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import SEO from "@/components/SEO";
 import { PAGE_SEO } from "@/lib/seo-config";
 
-type Category = "alle" | "recruiting" | "kanzleien";
+type Category = "alle" | "recruiting" | "kanzleien" | "fahrschulen";
 
 interface CaseStudy {
   name: string;
@@ -533,12 +533,35 @@ const caseStudies: CaseStudy[] = [
       description: "nach Einstellung"
     },
   },
+  // Fahrschulen
+  {
+    name: "Thomas Schille",
+    company: "Fahrschule Schille",
+    image: "/testimonials/thomas-schille.png",
+    quote: "Mit OffenBoost haben wir nicht nur mehr Fahrschüler gewonnen, sondern auch neue Fahrlehrer für unser Team gefunden.",
+    headline: "Fahrschüler-Akquise und Fahrlehrer-Recruiting in Stuttgart digitalisiert",
+    category: "fahrschulen",
+    results: [
+      "Deutlich mehr Fahrschüler-Anmeldungen durch digitale Präsenz",
+      "Neue qualifizierte Fahrlehrer erfolgreich eingestellt",
+      "Über 20 Jahre Erfahrung modern präsentiert",
+    ],
+    metric: {
+      label: "Fahrschüler-Anmeldungen",
+      value: 85,
+      suffix: "%",
+      prefix: "+",
+      direction: "up",
+      description: "gesteigert"
+    },
+  },
 ];
 
 const categories: { key: Category; label: string; icon: React.ElementType }[] = [
   { key: "alle", label: "Alle", icon: Star },
   { key: "recruiting", label: "Recruiting", icon: Users },
   { key: "kanzleien", label: "Kanzleien", icon: Building2 },
+  { key: "fahrschulen", label: "Fahrschulen", icon: Users },
 ];
 
 // Animated Counter Component
