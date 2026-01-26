@@ -29,6 +29,27 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   // Recruiting
   {
+    name: "Bahadir Battal",
+    company: "VeraPartners Leadership",
+    image: "/testimonials/bahadir-battal.webp",
+    quote: "OffenBoost hat unsere Art zu arbeiten revolutioniert. Wir erreichen jetzt mehr IT-Fachkräfte mit weniger Aufwand.",
+    headline: "Sales-Prozesse automatisiert und Kandidatenansprache skaliert",
+    category: "recruiting",
+    results: [
+      "Sales-Aktivitäten automatisiert und skaliert",
+      "Direktansprache von passiven IT-Kandidaten optimiert",
+      "Mehr qualifizierte Gespräche durch Prozesseffizienz",
+    ],
+    metric: {
+      label: "Sales-Aktivitäten",
+      value: 120,
+      suffix: "%",
+      prefix: "+",
+      direction: "up",
+      description: "mehr Outreach"
+    },
+  },
+  {
     name: "Yasar Sentürk",
     company: "searched GmbH",
     image: "/testimonials/yasar-sentuerk.png",

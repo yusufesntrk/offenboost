@@ -33,6 +33,26 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   // Recruiting
   {
+    quote: "Mit OffenBoost haben wir unsere Sales-Prozesse komplett neu gedacht. Die Automatisierung spart uns enorm viel Zeit bei der Kandidatenansprache.",
+    name: "Bahadir Battal",
+    role: "Gründer & Recruiting Experte",
+    company: "VeraPartners Leadership",
+    image: "/testimonials/bahadir-battal.webp",
+    category: "recruiting",
+    metric: {
+      label: "Sales-Effizienz",
+      value: 65,
+      suffix: "%",
+      prefix: "+",
+      direction: "up",
+      description: "gesteigert",
+    },
+    results: [
+      "Sales-Prozesse vollständig automatisiert",
+      "Mehr Zeit für qualitative Kandidatengespräche",
+    ],
+  },
+  {
     quote: "OffenBoost ist auf jeden Fall die schnellste Variante, um auf 500k im Monat zu skalieren!",
     name: "Yasar Sentürk",
     role: "Geschäftsführer",
