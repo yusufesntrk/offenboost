@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="160" height="32" viewBox="0 0 160 32">
   <!-- Background for the icon -->
   <rect width="32" height="32" rx="8" fill="#0073E6" />
-
+  
   <!-- Rocket Icon (Lucide Rocket) -->
   <g transform="translate(6, 6) scale(0.833)">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -12,8 +12,8 @@
     </svg>
   </g>
 
-  <!-- Text "OffenBoost" (White version for dark backgrounds) -->
+  <!-- Text "OffenBoost" -->
   <text x="40" y="22" font-family="Inter, system-ui, sans-serif" font-weight="bold" font-size="18">
-    <tspan fill="white">Offen</tspan><tspan fill="#0073E6">Boost</tspan>
+    <tspan fill="#111C2C">Offen</tspan><tspan fill="#0073E6">Boost</tspan>
   </text>
 </svg>
