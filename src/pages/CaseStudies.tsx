@@ -32,7 +32,7 @@ const caseStudies: CaseStudy[] = [
     name: "Yasar Sentürk",
     company: "searched GmbH",
     image: "/testimonials/yasar-sentuerk.png",
-    videoUrl: "https://www.youtube.com/watch?v=Ojiv9Smi4XE",
+
     quote: "Dank OffenBoost haben wir die Sparkasse als Kunden gewonnen und direkt eine 200k Upfront Fee kassiert. Reverse Recruiting auf einem ganz anderen Level.",
     headline: "Sparkasse als Kunde gewonnen und 200k Upfront Fee mit Reverse Recruiting kassiert",
     category: "recruiting",
@@ -138,7 +138,7 @@ const caseStudies: CaseStudy[] = [
     name: "Nordin Begdouri",
     company: "SalesWorx",
     image: "/testimonials/nordin-begdouri.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=IlJ52JJe29k",
+
     quote: "Seitdem das System läuft, fühlt sich Sales wie Cheaten an.",
     headline: "Sales-Abschlüsse um 80% gesteigert durch automatisierte Prozesse",
     category: "recruiting",

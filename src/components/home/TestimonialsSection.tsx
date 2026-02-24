@@ -38,7 +38,7 @@ const testimonials: Testimonial[] = [
     role: "Geschäftsführer",
     company: "searched GmbH",
     image: "/testimonials/yasar-sentuerk.png",
-    videoUrl: "https://www.youtube.com/watch?v=Ojiv9Smi4XE",
+
     category: "recruiting",
     metric: {
       label: "Upfront Fee",
@@ -139,7 +139,7 @@ const testimonials: Testimonial[] = [
     role: "Geschäftsführer",
     company: "SalesWorx",
     image: "/testimonials/nordin-begdouri.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=IlJ52JJe29k",
+
     category: "recruiting",
     metric: {
       label: "Sales-Abschlüsse",
