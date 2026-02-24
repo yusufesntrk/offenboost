@@ -48,6 +48,7 @@ export const coFounderSchema = {
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${SITE_CONFIG.url}/#organization`,
   name: SITE_CONFIG.company.name,
   legalName: SITE_CONFIG.company.legalName,
   url: SITE_CONFIG.url,
@@ -77,13 +78,30 @@ export const organizationSchema = {
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${SITE_CONFIG.url}/#website`,
   name: SITE_CONFIG.name,
   url: SITE_CONFIG.url,
   description: "Wachstumspartner aus Offenburg - Marketing, Recruiting, Automatisierung",
   publisher: {
-    "@type": "Organization",
-    name: SITE_CONFIG.company.name,
+    "@id": `${SITE_CONFIG.url}/#organization`,
   },
+};
+
+// WebPage Schema - verhindert Datumsanzeige in Suchergebnissen
+export const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${SITE_CONFIG.url}/#webpage`,
+  url: SITE_CONFIG.url,
+  name: "OffenBoost | Wachstumspartner aus Offenburg",
+  description: "Ihr Wachstumspartner für digitales Marketing, Recruiting und Automatisierung. Wir helfen Unternehmen planbar zu wachsen.",
+  isPartOf: {
+    "@id": `${SITE_CONFIG.url}/#website`,
+  },
+  about: {
+    "@id": `${SITE_CONFIG.url}/#organization`,
+  },
+  // Kein datePublished/dateModified = kein Datum in Suchergebnissen
 };
 
 // Service Schema for the main offering
@@ -258,6 +276,13 @@ export const testimonialReviews = [
     quote:
       "In kürzester Zeit genügend Anfragen für unsere Azubi-Stelle.",
   },
+  {
+    name: "Rüdiger Bruns",
+    role: "Geschäftsführer",
+    company: "AMONOVA GmbH",
+    quote:
+      "Das 1:1 ist mit keinem anderen Dienstleister zu vergleichen. Man wird rund um die Uhr betreut und eigene Wünsche, die höchst individuell sind, werden umgesetzt.",
+  },
 ];
 
 // LocalBusiness Schema - für lokale Suchergebnisse
@@ -296,6 +321,7 @@ export const homePageSchemaComplete = {
   "@graph": [
     organizationSchema,
     websiteSchema,
+    webPageSchema,
     serviceSchema,
     localBusinessSchema,
     founderSchema,

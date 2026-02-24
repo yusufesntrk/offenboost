@@ -134,6 +134,26 @@ const testimonials: Testimonial[] = [
       "Automatisierte Kandidaten-Matching Prozesse",
     ],
   },
+  {
+    quote: "Das 1:1 ist mit keinem anderen Dienstleister zu vergleichen. Man wird rund um die Uhr betreut und eigene Wünsche, die höchst individuell sind, werden umgesetzt.",
+    name: "Rüdiger Bruns",
+    role: "Geschäftsführer",
+    company: "AMONOVA GmbH",
+    image: "/testimonials/ruediger-bruns.jpg",
+    category: "recruiting",
+    metric: {
+      label: "Sales ROAS",
+      value: 5,
+      suffix: "x",
+      prefix: "",
+      direction: "up",
+      description: "Return on Ad Spend",
+    },
+    results: [
+      "Konzerne als Neukunden gewonnen",
+      "Sales ROAS von 5 erreicht",
+    ],
+  },
   // Kanzleien
   {
     quote: "OffenBoost hat uns als Wachstumspartner geholfen, deutlich mehr Mandanten zu gewinnen. Die Neumandate haben sich verdoppelt.",
