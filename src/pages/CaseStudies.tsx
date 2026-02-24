@@ -140,20 +140,20 @@ const caseStudies: CaseStudy[] = [
     company: "AMONOVA GmbH",
     image: "/testimonials/ruediger-bruns.jpg",
     quote: "Das 1:1 ist mit keinem anderen Dienstleister zu vergleichen. Man wird rund um die Uhr betreut und eigene Wünsche, die höchst individuell sind, werden umgesetzt.",
-    headline: "Konzerne als Neukunden gewonnen mit einem Sales ROAS von 5",
+    headline: "Konzerne als Neukunden gewonnen mit einem Sales ROI von 5",
     category: "recruiting",
     results: [
       "Konzerne als Neukunden gewonnen",
-      "Sales ROAS von 5 erreicht",
+      "Sales ROI von 5 erreicht",
       "Rund-um-die-Uhr-Betreuung mit individuellen Lösungen",
     ],
     metric: {
-      label: "Sales ROAS",
+      label: "Sales ROI",
       value: 5,
       suffix: "x",
       prefix: "",
       direction: "up",
-      description: "Return on Ad Spend"
+      description: "Return on Investment"
     },
   },
   // Kanzleien

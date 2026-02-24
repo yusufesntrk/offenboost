@@ -142,16 +142,16 @@ const testimonials: Testimonial[] = [
     image: "/testimonials/ruediger-bruns.jpg",
     category: "recruiting",
     metric: {
-      label: "Sales ROAS",
+      label: "Sales ROI",
       value: 5,
       suffix: "x",
       prefix: "",
       direction: "up",
-      description: "Return on Ad Spend",
+      description: "Return on Investment",
     },
     results: [
       "Konzerne als Neukunden gewonnen",
-      "Sales ROAS von 5 erreicht",
+      "Sales ROI von 5 erreicht",
     ],
   },
   // Kanzleien
