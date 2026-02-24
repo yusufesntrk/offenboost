@@ -54,7 +54,7 @@ const caseStudies: CaseStudy[] = [
     company: "searched GmbH",
     image: "/testimonials/yasar-sentuerk.png",
     videoUrl: "https://www.youtube.com/watch?v=Ojiv9Smi4XE",
-    quote: "OffenBoost ist auf jeden Fall die schnellste Variante, um auf 500k im Monat zu skalieren!",
+    quote: "Dank OffenBoost haben wir die Sparkasse als Kunden gewonnen und direkt eine 200k Upfront Fee kassiert. Reverse Recruiting auf einem ganz anderen Level.",
     headline: "Sparkasse als Kunde gewonnen und 200k Upfront Fee mit Reverse Recruiting kassiert",
     category: "recruiting",
     results: [

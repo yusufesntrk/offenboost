@@ -248,7 +248,7 @@ export const testimonialReviews = [
     role: "Geschäftsführer",
     company: "searched GmbH",
     quote:
-      "OffenBoost ist auf jeden Fall die schnellste Variante, um auf 500k im Monat zu skalieren!",
+      "Dank OffenBoost haben wir die Sparkasse als Kunden gewonnen und direkt eine 200k Upfront Fee kassiert.",
   },
   {
     name: "Nordin Begdouri",

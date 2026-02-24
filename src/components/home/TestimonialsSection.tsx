@@ -53,7 +53,7 @@ const testimonials: Testimonial[] = [
     ],
   },
   {
-    quote: "OffenBoost ist auf jeden Fall die schnellste Variante, um auf 500k im Monat zu skalieren!",
+    quote: "Dank OffenBoost haben wir die Sparkasse als Kunden gewonnen und direkt eine 200k Upfront Fee kassiert. Reverse Recruiting auf einem ganz anderen Level.",
     name: "Yasar Sentürk",
     role: "Geschäftsführer",
     company: "searched GmbH",
