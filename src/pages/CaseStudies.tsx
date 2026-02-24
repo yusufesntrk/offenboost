@@ -55,20 +55,20 @@ const caseStudies: CaseStudy[] = [
     image: "/testimonials/yasar-sentuerk.png",
     videoUrl: "https://www.youtube.com/watch?v=Ojiv9Smi4XE",
     quote: "OffenBoost ist auf jeden Fall die schnellste Variante, um auf 500k im Monat zu skalieren!",
-    headline: "Umsatz auf 500k/Monat skaliert durch automatisierte Sales-Prozesse",
+    headline: "Sparkasse als Kunde gewonnen und 200k Upfront Fee mit Reverse Recruiting kassiert",
     category: "recruiting",
     results: [
-      "Umsatz auf 500k pro Monat skaliert",
-      "Sales-Prozesse vollständig automatisiert",
-      "Schnellste Skalierung durch optimierte Abläufe",
+      "Sparkasse Finanzsparkasse als Großkunde gewonnen",
+      "200k Upfront Fee durch Reverse Recruiting Ansatz kassiert",
+      "Skalierung auf Top-Konzerne durch automatisierte Sales-Prozesse",
     ],
     metric: {
-      label: "Monatsumsatz",
-      value: 500,
+      label: "Upfront Fee",
+      value: 200,
       suffix: "k",
       prefix: "",
       direction: "up",
-      description: "skaliert"
+      description: "kassiert"
     },
   },
   {

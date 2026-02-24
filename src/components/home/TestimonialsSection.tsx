@@ -61,16 +61,16 @@ const testimonials: Testimonial[] = [
     videoUrl: "https://www.youtube.com/watch?v=Ojiv9Smi4XE",
     category: "recruiting",
     metric: {
-      label: "Monatsumsatz",
-      value: 500,
+      label: "Upfront Fee",
+      value: 200,
       suffix: "k",
       prefix: "",
       direction: "up",
-      description: "skaliert",
+      description: "kassiert",
     },
     results: [
-      "Umsatz auf 500k/Monat skaliert",
-      "Sales-Prozesse vollständig automatisiert",
+      "Sparkasse Finanzsparkasse als Kunde gewonnen",
+      "200k Upfront Fee mit Reverse Recruiting Ansatz",
     ],
   },
   {
