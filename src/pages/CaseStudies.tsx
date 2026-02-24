@@ -95,7 +95,7 @@ const caseStudies: CaseStudy[] = [
   {
     name: "Bahadir Battal",
     company: "VeraPartners Leadership",
-    image: "/testimonials/bahadir-battal.webp",
+    image: "/testimonials/bahadir-battal.jpg",
     quote: "Durch OffenBoost haben wir unsere Sales-Pipeline komplett transformiert. Wir generieren jetzt deutlich mehr qualifizierte Leads als vorher.",
     headline: "Sales-Pipeline um 65% gesteigert durch automatisierte Lead-Generierung",
     category: "recruiting",

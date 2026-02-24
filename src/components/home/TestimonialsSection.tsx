@@ -98,7 +98,7 @@ const testimonials: Testimonial[] = [
     name: "Bahadir Battal",
     role: "Gründer & Recruiting Experte",
     company: "VeraPartners Leadership",
-    image: "/testimonials/bahadir-battal.webp",
+    image: "/testimonials/bahadir-battal.jpg",
     category: "recruiting",
     metric: {
       label: "Sales-Pipeline",
