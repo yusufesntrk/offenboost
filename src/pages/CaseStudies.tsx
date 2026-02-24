@@ -29,27 +29,6 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   // Recruiting
   {
-    name: "Bahadir Battal",
-    company: "VeraPartners Leadership",
-    image: "/testimonials/bahadir-battal.webp",
-    quote: "Durch OffenBoost haben wir unsere Sales-Pipeline komplett transformiert. Wir generieren jetzt deutlich mehr qualifizierte Leads als vorher.",
-    headline: "Sales-Pipeline um 65% gesteigert durch automatisierte Lead-Generierung",
-    category: "recruiting",
-    results: [
-      "Sales-Pipeline um 65% gesteigert",
-      "Qualifizierte Leads durch automatisierte Ansprache gewonnen",
-      "Mehr Abschlüsse durch datengetriebene Sales-Prozesse",
-    ],
-    metric: {
-      label: "Sales-Pipeline",
-      value: 65,
-      suffix: "%",
-      prefix: "+",
-      direction: "up",
-      description: "mehr Leads"
-    },
-  },
-  {
     name: "Yasar Sentürk",
     company: "searched GmbH",
     image: "/testimonials/yasar-sentuerk.png",
@@ -69,6 +48,69 @@ const caseStudies: CaseStudy[] = [
       prefix: "",
       direction: "up",
       description: "kassiert"
+    },
+  },
+  {
+    name: "Rüdiger Bruns",
+    company: "AMONOVA GmbH",
+    image: "/testimonials/ruediger-bruns.jpg",
+    quote: "Das 1:1 ist mit keinem anderen Dienstleister zu vergleichen. Man wird rund um die Uhr betreut und eigene Wünsche, die höchst individuell sind, werden umgesetzt.",
+    headline: "Trotz schwieriger Recruiting-Lage Konzerne an hart umkämpftem Standort gewonnen",
+    category: "recruiting",
+    results: [
+      "Trotz schwieriger Recruiting-Lage neue Sales generiert",
+      "Konzerne als Neukunden an hart umkämpftem Standort gesichert",
+      "Sales ROI von 5x bei individueller 1:1 Betreuung",
+    ],
+    metric: {
+      label: "Sales ROI",
+      value: 5,
+      suffix: "x",
+      prefix: "",
+      direction: "up",
+      description: "Return on Investment"
+    },
+  },
+  {
+    name: "Dr. Thomas Wendel",
+    company: "tw.con. GmbH",
+    image: "/testimonials/thomas-wendel.jpg",
+    quote: "OffenBoost hat unsere Vermittlungsprozesse auf ein neues Level gehoben.",
+    headline: "Ärzte- und Apothekervermittlung beschleunigt und Matching automatisiert",
+    category: "recruiting",
+    results: [
+      "Vermittlungszeit um 40% reduziert durch automatisiertes Matching",
+      "Kandidaten-Pipeline vollständig digitalisiert",
+      "Qualität der Vermittlungen deutlich gesteigert",
+    ],
+    metric: {
+      label: "Vermittlungszeit",
+      value: 40,
+      suffix: "%",
+      prefix: "-",
+      direction: "down",
+      description: "schneller"
+    },
+  },
+  {
+    name: "Bahadir Battal",
+    company: "VeraPartners Leadership",
+    image: "/testimonials/bahadir-battal.webp",
+    quote: "Durch OffenBoost haben wir unsere Sales-Pipeline komplett transformiert. Wir generieren jetzt deutlich mehr qualifizierte Leads als vorher.",
+    headline: "Sales-Pipeline um 65% gesteigert durch automatisierte Lead-Generierung",
+    category: "recruiting",
+    results: [
+      "Sales-Pipeline um 65% gesteigert",
+      "Qualifizierte Leads durch automatisierte Ansprache gewonnen",
+      "Mehr Abschlüsse durch datengetriebene Sales-Prozesse",
+    ],
+    metric: {
+      label: "Sales-Pipeline",
+      value: 65,
+      suffix: "%",
+      prefix: "+",
+      direction: "up",
+      description: "mehr Leads"
     },
   },
   {
@@ -112,48 +154,6 @@ const caseStudies: CaseStudy[] = [
       prefix: "+",
       direction: "up",
       description: "gesteigert"
-    },
-  },
-  {
-    name: "Dr. Thomas Wendel",
-    company: "tw.con. GmbH",
-    image: "/testimonials/thomas-wendel.jpg",
-    quote: "OffenBoost hat unsere Vermittlungsprozesse auf ein neues Level gehoben.",
-    headline: "Ärzte- und Apothekervermittlung beschleunigt und Matching automatisiert",
-    category: "recruiting",
-    results: [
-      "Vermittlungszeit um 40% reduziert durch automatisiertes Matching",
-      "Kandidaten-Pipeline vollständig digitalisiert",
-      "Qualität der Vermittlungen deutlich gesteigert",
-    ],
-    metric: {
-      label: "Vermittlungszeit",
-      value: 40,
-      suffix: "%",
-      prefix: "-",
-      direction: "down",
-      description: "schneller"
-    },
-  },
-  {
-    name: "Rüdiger Bruns",
-    company: "AMONOVA GmbH",
-    image: "/testimonials/ruediger-bruns.jpg",
-    quote: "Das 1:1 ist mit keinem anderen Dienstleister zu vergleichen. Man wird rund um die Uhr betreut und eigene Wünsche, die höchst individuell sind, werden umgesetzt.",
-    headline: "Trotz schwieriger Recruiting-Lage Konzerne an hart umkämpftem Standort gewonnen",
-    category: "recruiting",
-    results: [
-      "Trotz schwieriger Recruiting-Lage neue Sales generiert",
-      "Konzerne als Neukunden an hart umkämpftem Standort gesichert",
-      "Sales ROI von 5x bei individueller 1:1 Betreuung",
-    ],
-    metric: {
-      label: "Sales ROI",
-      value: 5,
-      suffix: "x",
-      prefix: "",
-      direction: "up",
-      description: "Return on Investment"
     },
   },
   // Kanzleien
