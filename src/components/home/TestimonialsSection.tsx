@@ -150,8 +150,8 @@ const testimonials: Testimonial[] = [
       description: "Return on Investment",
     },
     results: [
-      "Konzerne als Neukunden gewonnen",
-      "Sales ROI von 5 erreicht",
+      "Trotz schwieriger Recruiting-Lage neue Sales gewonnen",
+      "Konzerne an hart umkämpftem Standort als Neukunden gesichert",
     ],
   },
   // Kanzleien
