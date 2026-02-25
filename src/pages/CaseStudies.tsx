@@ -559,21 +559,21 @@ const caseStudies: CaseStudy[] = [
     name: "Thomas Schille",
     company: "Fahrschule Schille",
     image: "/testimonials/thomas-schille.png",
-    quote: "Mit OffenBoost haben wir nicht nur mehr Fahrschüler gewonnen, sondern auch neue Fahrlehrer für unser Team gefunden.",
-    headline: "Fahrschüler-Akquise und Fahrlehrer-Recruiting in Stuttgart digitalisiert",
+    quote: "50 neue Fahrschüler in einem Monat – das sind über 175.000€ Umsatz. OffenBoost hat uns zur Top-Fahrschule in Stuttgart gemacht.",
+    headline: "50 neue Fahrschüler, 175.000€ Umsatz in einem Monat und neue Fahrlehrer trotz Fachkräftemangel",
     category: "fahrschulen",
     results: [
-      "Deutlich mehr Fahrschüler-Anmeldungen durch digitale Präsenz",
-      "Neue qualifizierte Fahrlehrer erfolgreich eingestellt",
-      "Über 20 Jahre Erfahrung modern präsentiert",
+      "50 neue Fahrschüler-Anfragen in nur einem Monat generiert",
+      "175.000€ Umsatzpotenzial durch neue Anmeldungen",
+      "Neue Fahrlehrer gewonnen trotz akutem Fachkräftemangel in der Branche",
     ],
     metric: {
-      label: "Fahrschüler-Anmeldungen",
-      value: 85,
-      suffix: "%",
-      prefix: "+",
+      label: "ROI",
+      value: 10,
+      suffix: "x",
+      prefix: "",
       direction: "up",
-      description: "gesteigert"
+      description: "Return on Investment"
     },
   },
 ];

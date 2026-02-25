@@ -537,23 +537,23 @@ const testimonials: Testimonial[] = [
   },
   // Fahrschulen
   {
-    quote: "Mit OffenBoost haben wir nicht nur mehr Fahrschüler gewonnen, sondern auch neue Fahrlehrer für unser Team gefunden.",
+    quote: "50 neue Fahrschüler in einem Monat – das sind über 175.000€ Umsatz. OffenBoost hat uns zur Top-Fahrschule in Stuttgart gemacht.",
     name: "Thomas Schille",
     role: "Inhaber",
     company: "Fahrschule Schille",
     image: "/testimonials/thomas-schille.png",
     category: "fahrschulen",
     metric: {
-      label: "Fahrschüler-Anmeldungen",
-      value: 85,
-      suffix: "%",
-      prefix: "+",
+      label: "ROI",
+      value: 10,
+      suffix: "x",
+      prefix: "",
       direction: "up",
-      description: "gesteigert",
+      description: "Return on Investment",
     },
     results: [
-      "Mehr Fahrschüler durch digitale Präsenz",
-      "Neue Fahrlehrer erfolgreich eingestellt",
+      "175.000€ Umsatz durch 50 neue Fahrschüler in einem Monat",
+      "Neue Fahrlehrer gewonnen trotz Fachkräftemangel",
     ],
   },
 ];
