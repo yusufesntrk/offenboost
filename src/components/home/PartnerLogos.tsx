@@ -37,7 +37,7 @@ const PartnerLogos = () => {
         <img
           src={partner.logo}
           alt={partner.name}
-          className="h-7 md:h-8 w-auto max-w-[140px] object-contain brightness-0 invert opacity-50"
+          className="h-7 md:h-8 w-auto max-w-[140px] object-contain brightness-0 opacity-50"
           loading="lazy"
         />
       ) : (
