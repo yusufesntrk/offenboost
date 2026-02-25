@@ -1,32 +1,52 @@
 const PartnerLogos = () => {
-  const companies = [
-    "searched GmbH",
-    "AMONOVA GmbH",
-    "tw.con. GmbH",
-    "VeraPartners Leadership",
-    "Experiton UG",
-    "SalesWorx",
-    "B&L Berger Lindzus Lutz",
-    "Quentin / Quitter & Eckhardt",
-    "Kanzlei Kronbiegel",
-    "adam, wüst & partner",
-    "Rendler & Hoferer",
-    "Gilpert & Kollegen",
-    "adfontis Steuerberatung",
-    "Steuerkanzlei Neumann",
-    "Bartholomä Kanzlei",
-    "Dr. Schauer Steuerberater",
-    "Reichelt Steuerberatung",
-    "Pfefferle Gruppe",
-    "Thau Steuerberater",
-    "Werner & Wollscheid",
-    "ETL Nelles & Kollegen",
-    "KMS Partner",
-    "Beck Steuerberatung",
-    "Bierhaus & Partner",
-    "Steuerkanzlei Witte",
-    "Fahrschule Schille",
+  const partners: { name: string; logo?: string }[] = [
+    { name: "searched GmbH", logo: "/logos/searched-gmbh.webp" },
+    { name: "AMONOVA GmbH", logo: "/logos/amonova-gmbh.jpg" },
+    { name: "tw.con. GmbH", logo: "/logos/twcon-gmbh.png" },
+    { name: "VeraPartners Leadership", logo: "/logos/verapartners.svg" },
+    { name: "Experiton UG", logo: "/logos/experiton.png" },
+    { name: "SalesWorx", logo: "/logos/salesworx.png" },
+    { name: "B&L Berger Lindzus Lutz", logo: "/logos/bl-berger-lindzus.png" },
+    { name: "Quentin / Quitter & Eckhardt", logo: "/logos/quentin-quitter-eckhardt.png" },
+    { name: "Kanzlei Kronbiegel", logo: "/logos/kanzlei-kronbiegel.png" },
+    { name: "adam, wüst & partner", logo: "/logos/adam-wuest-partner.png" },
+    { name: "Rendler & Hoferer", logo: "/logos/rendler-hoferer.svg" },
+    { name: "Gilpert & Kollegen", logo: "/logos/gilpert-kollegen.png" },
+    { name: "adfontis Steuerberatung", logo: "/logos/adfontis-steuerberatung.png" },
+    { name: "Steuerkanzlei Neumann" },
+    { name: "Bartholomä Kanzlei", logo: "/logos/bartholomae-kanzlei.png" },
+    { name: "Dr. Schauer Steuerberater", logo: "/logos/dr-schauer.png" },
+    { name: "Reichelt Steuerberatung", logo: "/logos/reichelt-steuerberatung.png" },
+    { name: "Pfefferle Gruppe", logo: "/logos/pfefferle-gruppe.png" },
+    { name: "Thau Steuerberater" },
+    { name: "Werner & Wollscheid", logo: "/logos/werner-wollscheid.png" },
+    { name: "ETL Nelles & Kollegen", logo: "/logos/etl-nelles-kollegen.svg" },
+    { name: "KMS Partner", logo: "/logos/kms-partner.svg" },
+    { name: "Beck Steuerberatung", logo: "/logos/beck-steuerberatung.png" },
+    { name: "Bierhaus & Partner", logo: "/logos/bierhaus-partner.png" },
+    { name: "Steuerkanzlei Witte", logo: "/logos/steuerkanzlei-witte.png" },
+    { name: "Fahrschule Schille", logo: "/logos/fahrschule-schille.jpg" },
   ];
+
+  const renderPartner = (partner: { name: string; logo?: string }, i: number) => (
+    <div
+      key={`${partner.name}-${i}`}
+      className="flex-shrink-0 flex items-center justify-center h-10 px-6 md:px-8"
+    >
+      {partner.logo ? (
+        <img
+          src={partner.logo}
+          alt={partner.name}
+          className="h-7 md:h-8 w-auto max-w-[140px] object-contain brightness-0 invert opacity-50"
+          loading="lazy"
+        />
+      ) : (
+        <span className="text-sm md:text-base font-semibold text-muted-foreground/50 whitespace-nowrap tracking-tight">
+          {partner.name}
+        </span>
+      )}
+    </div>
+  );
 
   return (
     <section className="py-10 px-4 md:px-8 overflow-hidden">
@@ -42,18 +62,9 @@ const PartnerLogos = () => {
         <div className="absolute left-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
-        <div className="flex animate-scroll-left">
+        <div className="flex items-center animate-scroll-left">
           {/* Double the items for seamless loop */}
-          {[...companies, ...companies].map((company, i) => (
-            <div
-              key={`${company}-${i}`}
-              className="flex-shrink-0 px-6 md:px-8"
-            >
-              <span className="text-sm md:text-base font-medium text-muted-foreground/60 whitespace-nowrap">
-                {company}
-              </span>
-            </div>
-          ))}
+          {[...partners, ...partners].map((partner, i) => renderPartner(partner, i))}
         </div>
       </div>
 
@@ -67,7 +78,7 @@ const PartnerLogos = () => {
           }
         }
         .animate-scroll-left {
-          animation: scroll-left 30s linear infinite;
+          animation: scroll-left 40s linear infinite;
           width: max-content;
         }
         .animate-scroll-left:hover {
