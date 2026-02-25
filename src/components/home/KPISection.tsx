@@ -1,6 +1,6 @@
 const kpis = [
   { value: "100+", label: "Erfolgreich umgesetzte Projekte" },
-  { value: "50+", label: "Zufriedene Kunden" },
+  { value: "250+", label: "Zufriedene Partner" },
   { value: "4+", label: "Jahre Erfahrung" },
   { value: "24h", label: "Durchschnittliche Reaktionszeit" },
 ];
