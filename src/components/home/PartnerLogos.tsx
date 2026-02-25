@@ -1,6 +1,6 @@
 const PartnerLogos = () => {
   const partners: { name: string; logo?: string }[] = [
-    { name: "searched GmbH", logo: "/logos/searched-gmbh.webp" },
+    { name: "searched GmbH", logo: "/logos/searched-gmbh.png" },
     { name: "AMONOVA GmbH", logo: "/logos/amonova-gmbh.png" },
     { name: "tw.con. GmbH", logo: "/logos/twcon-gmbh.png" },
     { name: "VeraPartners Leadership", logo: "/logos/verapartners.svg" },
