@@ -1,7 +1,7 @@
 const PartnerLogos = () => {
   const partners: { name: string; logo?: string }[] = [
     { name: "searched GmbH", logo: "/logos/searched-gmbh.webp" },
-    { name: "AMONOVA GmbH", logo: "/logos/amonova-gmbh.jpg" },
+    { name: "AMONOVA GmbH", logo: "/logos/amonova-gmbh.png" },
     { name: "tw.con. GmbH", logo: "/logos/twcon-gmbh.png" },
     { name: "VeraPartners Leadership", logo: "/logos/verapartners.svg" },
     { name: "Experiton UG", logo: "/logos/experiton.png" },
@@ -25,7 +25,7 @@ const PartnerLogos = () => {
     { name: "Beck Steuerberatung", logo: "/logos/beck-steuerberatung.png" },
     { name: "Bierhaus & Partner", logo: "/logos/bierhaus-partner.png" },
     { name: "Steuerkanzlei Witte", logo: "/logos/steuerkanzlei-witte.png" },
-    { name: "Fahrschule Schille", logo: "/logos/fahrschule-schille.jpg" },
+    { name: "Fahrschule Schille", logo: "/logos/fahrschule-schille.png" },
   ];
 
   const renderPartner = (partner: { name: string; logo?: string }, i: number) => (
