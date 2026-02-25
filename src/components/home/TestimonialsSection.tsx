@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
-type Category = "alle" | "recruiting" | "kanzleien" | "fahrschulen";
+type Category = "alle" | "recruiting" | "kanzleien" | "praxen" | "fahrschulen";
 
 interface Testimonial {
   quote: string;
@@ -556,12 +556,35 @@ const testimonials: Testimonial[] = [
       "Neue Fahrlehrer gewonnen trotz Fachkräftemangel",
     ],
   },
+  // Praxen
+  {
+    quote: "Durch OffenBoost haben wir nicht nur deutlich mehr Patienten gewonnen, sondern auch unsere komplette Praxisverwaltung automatisiert. Telefonassistent, Online-Anmeldung, E-Mail-Automation – wir sparen Stunden an Bürokratie jeden Tag.",
+    name: "Dr. Schmidt",
+    role: "Zahnarzt & Inhaber",
+    company: "Zahnärzte im Seerheincenter Konstanz",
+    image: "/testimonials/dr-schmidt.jpg",
+    category: "praxen",
+    metric: {
+      label: "Neupatientenanfragen",
+      value: 140,
+      suffix: "%",
+      prefix: "+",
+      direction: "up",
+      description: "Steigerung durch gezieltes Marketing",
+    },
+    results: [
+      "KI-Telefonassistent beantwortet 80% der Anrufe automatisch",
+      "Online-Terminbuchung reduziert Verwaltungsaufwand um 15h/Woche",
+      "E-Mail-Automationen für Recall, Bewertungen und Nachsorge",
+    ],
+  },
 ];
 
 const categories: { key: Category; label: string }[] = [
   { key: "alle", label: "Alle" },
   { key: "recruiting", label: "Recruiting" },
   { key: "kanzleien", label: "Kanzleien" },
+  { key: "praxen", label: "Praxen" },
   { key: "fahrschulen", label: "Fahrschulen" },
 ];
 

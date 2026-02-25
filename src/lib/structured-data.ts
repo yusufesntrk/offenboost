@@ -283,6 +283,13 @@ export const testimonialReviews = [
     quote:
       "Das 1:1 ist mit keinem anderen Dienstleister zu vergleichen. Man wird rund um die Uhr betreut und eigene Wünsche, die höchst individuell sind, werden umgesetzt.",
   },
+  {
+    name: "Dr. Schmidt",
+    role: "Zahnarzt & Inhaber",
+    company: "Zahnärzte im Seerheincenter Konstanz",
+    quote:
+      "Durch OffenBoost haben wir nicht nur deutlich mehr Patienten gewonnen, sondern auch unsere komplette Praxisverwaltung automatisiert.",
+  },
 ];
 
 // LocalBusiness Schema - für lokale Suchergebnisse

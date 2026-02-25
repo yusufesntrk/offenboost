@@ -1,11 +1,11 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { Play, Check, TrendingUp, TrendingDown, Star, Building2, Users } from "lucide-react";
+import { Play, Check, TrendingUp, TrendingDown, Star, Building2, Users, Stethoscope } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import SEO from "@/components/SEO";
 import { PAGE_SEO } from "@/lib/seo-config";
 
-type Category = "alle" | "recruiting" | "kanzleien" | "fahrschulen";
+type Category = "alle" | "recruiting" | "kanzleien" | "praxen" | "fahrschulen";
 
 interface CaseStudy {
   name: string;
@@ -578,12 +578,36 @@ const caseStudies: CaseStudy[] = [
       description: "Return on Investment"
     },
   },
+  // Praxen
+  {
+    name: "Dr. Schmidt",
+    role: "Zahnarzt & Inhaber",
+    company: "Zahnärzte im Seerheincenter Konstanz",
+    image: "/testimonials/dr-schmidt.jpg",
+    quote: "Durch OffenBoost haben wir nicht nur deutlich mehr Patienten gewonnen, sondern auch unsere komplette Praxisverwaltung automatisiert. Telefonassistent, Online-Anmeldung, E-Mail-Automation – wir sparen Stunden an Bürokratie jeden Tag.",
+    headline: "+140% Neupatientenanfragen und komplette Praxisautomation mit KI-Telefonassistent",
+    category: "praxen",
+    results: [
+      "KI-Telefonassistent beantwortet 80% der Anrufe automatisch",
+      "Online-Terminbuchung reduziert Verwaltungsaufwand um 15h/Woche",
+      "E-Mail-Automationen für Recall, Bewertungen und Nachsorge",
+    ],
+    metric: {
+      label: "Neupatientenanfragen",
+      value: 140,
+      suffix: "%",
+      prefix: "+",
+      direction: "up",
+      description: "Steigerung durch gezieltes Marketing",
+    },
+  },
 ];
 
 const categories: { key: Category; label: string; icon: React.ElementType }[] = [
   { key: "alle", label: "Alle", icon: Star },
   { key: "recruiting", label: "Recruiting", icon: Users },
   { key: "kanzleien", label: "Kanzleien", icon: Building2 },
+  { key: "praxen", label: "Praxen", icon: Stethoscope },
   { key: "fahrschulen", label: "Fahrschulen", icon: Users },
 ];
 

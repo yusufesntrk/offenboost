@@ -1,16 +1,16 @@
 const PartnerLogos = () => {
   const partners: { name: string; logo?: string }[] = [
     { name: "searched GmbH", logo: "/logos/searched-gmbh.png" },
-    { name: "AMONOVA GmbH", logo: "/logos/amonova-gmbh.png" },
+    { name: "AMONOVA GmbH" },
     { name: "tw.con. GmbH", logo: "/logos/twcon-gmbh.png" },
-    { name: "VeraPartners Leadership", logo: "/logos/verapartners.svg" },
+    { name: "VeraPartners Leadership" },
     { name: "Experiton UG", logo: "/logos/experiton.png" },
     { name: "SalesWorx", logo: "/logos/salesworx.png" },
     { name: "B&L Berger Lindzus Lutz", logo: "/logos/bl-berger-lindzus.png" },
     { name: "Quentin / Quitter & Eckhardt", logo: "/logos/quentin-quitter-eckhardt.png" },
     { name: "Kanzlei Kronbiegel", logo: "/logos/kanzlei-kronbiegel.png" },
-    { name: "adam, wüst & partner", logo: "/logos/adam-wuest-partner.png" },
-    { name: "Rendler & Hoferer", logo: "/logos/rendler-hoferer.svg" },
+    { name: "adam, wüst & partner" },
+    { name: "Rendler & Hoferer" },
     { name: "Gilpert & Kollegen", logo: "/logos/gilpert-kollegen.png" },
     { name: "adfontis Steuerberatung", logo: "/logos/adfontis-steuerberatung.png" },
     { name: "Steuerkanzlei Neumann" },
@@ -22,10 +22,11 @@ const PartnerLogos = () => {
     { name: "Werner & Wollscheid", logo: "/logos/werner-wollscheid.png" },
     { name: "ETL Nelles & Kollegen", logo: "/logos/etl-nelles-kollegen.svg" },
     { name: "KMS Partner", logo: "/logos/kms-partner.svg" },
-    { name: "Beck Steuerberatung", logo: "/logos/beck-steuerberatung.png" },
-    { name: "Bierhaus & Partner", logo: "/logos/bierhaus-partner.png" },
-    { name: "Steuerkanzlei Witte", logo: "/logos/steuerkanzlei-witte.png" },
-    { name: "Fahrschule Schille", logo: "/logos/fahrschule-schille.png" },
+    { name: "Beck Steuerberatung" },
+    { name: "Bierhaus & Partner" },
+    { name: "Steuerkanzlei Witte" },
+    { name: "Fahrschule Schille" },
+    { name: "Zahnärzte im Seerheincenter" },
   ];
 
   const renderPartner = (partner: { name: string; logo?: string }, i: number) => (
