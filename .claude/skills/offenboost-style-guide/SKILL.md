@@ -15,13 +15,12 @@ Offizielles Design System für das OffenBoost Website-Projekt.
 
 ## Farbpalette
 
-### Primärfarben (OffenBoost Red)
+### Primärfarben (OffenBoost Blue)
 
 | Name | HSL | Hex | Verwendung |
 |------|-----|-----|------------|
-| **Primary** | `0 72% 50%` | `#DA2828` | CTAs, Links, Akzente, Brand |
-| **Primary (Dark)** | `0 72% 55%` | `#E04545` | Dark Mode Primary |
-| **Accent** | `12 76% 61%` | `#E8734A` | Hover-States, Gradients, Orange Highlights |
+| **Primary** | `210 100% 45%` | `#0073E6` | CTAs, Links, Akzente, Brand |
+| **Accent** | `200 100% 50%` | `#00BFFF` | Hover-States, Gradients, Highlights |
 
 ### Hintergrundfarben
 
