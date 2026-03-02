@@ -9,6 +9,7 @@ type Category = "alle" | "recruiting" | "kanzleien" | "praxen" | "fahrschulen";
 
 interface CaseStudy {
   name: string;
+  role?: string;
   company: string;
   image?: string;
   videoUrl?: string;
@@ -30,6 +31,7 @@ const caseStudies: CaseStudy[] = [
   // Recruiting
   {
     name: "Yasar Sentürk",
+    role: "Geschäftsführer",
     company: "searched GmbH",
     image: "/testimonials/yasar-sentuerk.png",
 
@@ -52,6 +54,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Rüdiger Bruns",
+    role: "Geschäftsführer",
     company: "AMONOVA GmbH",
     image: "/testimonials/ruediger-bruns.jpg",
     quote: "Das 1:1 ist mit keinem anderen Dienstleister zu vergleichen. Man wird rund um die Uhr betreut und eigene Wünsche, die höchst individuell sind, werden umgesetzt.",
@@ -73,6 +76,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Dr. Thomas Wendel",
+    role: "Geschäftsführer",
     company: "tw.con. GmbH",
     image: "/testimonials/thomas-wendel.jpg",
     quote: "OffenBoost hat unsere Vermittlungsprozesse auf ein neues Level gehoben.",
@@ -94,6 +98,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Bahadir Battal",
+    role: "Gründer & Recruiting Experte",
     company: "VeraPartners Leadership",
     image: "/testimonials/bahadir-battal.jpg",
     quote: "Durch OffenBoost haben wir unsere Sales-Pipeline komplett transformiert. Wir generieren jetzt deutlich mehr qualifizierte Leads als vorher.",
@@ -115,6 +120,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Alireza Nikjou",
+    role: "Geschäftsführer",
     company: "Experiton UG",
     image: "/testimonials/alireza-nikjou.png",
     quote: "Durch OffenBoost konnten wir unseren Sales-Output verdreifachen – und das bei weniger Aufwand.",
@@ -136,6 +142,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Nordin Begdouri",
+    role: "Geschäftsführer",
     company: "SalesWorx",
     image: "/testimonials/nordin-begdouri.jpg",
 
@@ -159,6 +166,7 @@ const caseStudies: CaseStudy[] = [
   // Kanzleien
   {
     name: "Jürgen Berger",
+    role: "Steuerberater & Partner",
     company: "B&L Berger Lindzus Lutz",
     image: "/testimonials/juergen-berger.jpg",
     quote: "Innerhalb von 4 Wochen hatten wir die Steuerfachangestellte eingestellt, die wir seit Monaten gesucht haben. Gleichzeitig haben sich unsere Neumandate verdoppelt.",
@@ -180,6 +188,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Christian Eckhardt",
+    role: "Steuerberater & Partner",
     company: "Quentin / Quitter & Eckhardt",
     image: "/testimonials/christian-eckhardt.jpg",
     quote: "Wir haben drei Steuerfachangestellte gefunden, die alle langfristig geblieben sind. Gleichzeitig hat sich unser Kanzleigewinn fast verdoppelt.",
@@ -201,6 +210,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Martina Kronbiegel",
+    role: "Steuerberaterin",
     company: "Kanzlei Kronbiegel",
     image: "/testimonials/martina-kronbiegel.jpg",
     quote: "1-3 Premium-Mandantenanfragen pro Woche, 90% davon hochqualifiziert. Unsere Gewinnmarge ist explodiert, weil wir uns endlich die Mandanten aussuchen können.",
@@ -222,6 +232,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Marc Wüst",
+    role: "Steuerberater & Partner",
     company: "adam, wüst & partner",
     image: "/testimonials/marc-wuest.jpg",
     quote: "Zwei Steuerfachangestellte eingestellt, die andere Kanzleien seit Monaten suchen. Der Kanzleigewinn hat sich dadurch verdoppelt.",
@@ -243,6 +254,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Florian Rendler",
+    role: "Geschäftsführer",
     company: "Rendler & Hoferer",
     image: "/testimonials/florian-rendler.jpg",
     quote: "In einer Region, wo jede Kanzlei um Fachkräfte kämpft, haben wir drei neue Mitarbeiter gewonnen. Der Umsatz pro Mitarbeiter ist um 60% gestiegen.",
@@ -264,6 +276,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Peter Gilpert",
+    role: "Steuerberater & Geschäftsführer",
     company: "Gilpert & Kollegen",
     image: "/testimonials/peter-gilpert.jpg",
     quote: "Wir nehmen nur noch Mandanten mit Honoraren über 500€/Monat an. Unsere Gewinnmarge liegt jetzt bei über 65%. Vorher undenkbar.",
@@ -285,6 +298,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Anette Benzing",
+    role: "Geschäftsführerin",
     company: "adfontis Steuerberatung",
     image: "/testimonials/anette-benzing.jpg",
     quote: "Zwei Steuerfachangestellte im Heilberufe-Segment gefunden – Fachkräfte, die genau zu uns passen und unser Wachstum antreiben.",
@@ -306,6 +320,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Ina Neumann",
+    role: "Steuerberaterin",
     company: "Steuerkanzlei Neumann",
     image: "/testimonials/ina-neumann.jpg",
     quote: "Innerhalb von 6 Wochen hatten wir eine Top-Steuerfachangestellte und 12 neue Premium-Mandanten. Der ROI war schon im ersten Monat positiv.",
@@ -327,6 +342,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Gunther Bartholomä",
+    role: "Steuerberater & Rechtsanwalt",
     company: "Bartholomä Kanzlei",
     image: "/testimonials/gunther-bartholomae.webp",
     quote: "Als Steuerberater und Rechtsanwalt brauche ich Mitarbeiter, die beides verstehen. OffenBoost hat mir genau diese Leute gebracht.",
@@ -348,6 +364,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Dr. Ralf Schauer",
+    role: "Geschäftsführer",
     company: "Dr. Schauer Steuerberater",
     image: "/testimonials/dr-ralf-schauer.jpg",
     quote: "Bei 140+ Mitarbeitern ist jede Fehlbesetzung teuer. OffenBoost hat uns Fachkräfte gebracht, die wirklich passen – und unser Wachstum tragen.",
@@ -369,6 +386,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Oliver Reichelt",
+    role: "Geschäftsführer",
     company: "Reichelt Steuerberatung",
     image: "/testimonials/oliver-reichelt.jpg",
     quote: "Wir sind jetzt die Nummer 1 in der Region. Mehr Premium-Mandanten, bessere Fachkräfte, höhere Margen – alles durch OffenBoost.",
@@ -390,6 +408,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Harry Kressl",
+    role: "Geschäftsführender Partner",
     company: "Pfefferle Gruppe",
     image: "/testimonials/harry-kressl.jpg",
     quote: "Für unser Netzwerk aus Rechtsanwälten, Steuerberatern und Wirtschaftsprüfern haben wir 5 neue Fachkräfte eingestellt. Alle sind geblieben.",
@@ -411,6 +430,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Karl-Heinz Thau",
+    role: "Steuerberater",
     company: "Thau Steuerberater",
     image: "/testimonials/karl-heinz-thau.jpg",
     quote: "Nach 30 Jahren Kanzlei dachte ich, gutes Personal gibt es nicht mehr. OffenBoost hat mich eines Besseren belehrt – und unseren Gewinn verdoppelt.",
@@ -432,6 +452,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Peter Werner",
+    role: "Steuerberater & Partner",
     company: "Werner & Wollscheid",
     image: "/testimonials/peter-werner.jpg",
     quote: "Beide Standorte mit Top-Fachkräften besetzt. Die Gewinnmarge ist an beiden Standorten über 60%. Das hatten wir noch nie.",
@@ -453,6 +474,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Alfred Nelles",
+    role: "Steuerberater",
     company: "ETL Nelles & Kollegen",
     image: "/testimonials/alfred-nelles.jpg",
     quote: "Selbst im ETL-Netzwerk staunen sie über unsere Zahlen. Wir wachsen schneller als jede andere ETL-Kanzlei in der Region.",
@@ -474,6 +496,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Christian Seifert",
+    role: "Wirtschaftsprüfer & Steuerberater",
     company: "KMS Partner",
     image: "/testimonials/christian-seifert.jpg",
     quote: "Als WP und StB brauchen wir hochqualifizierte Leute. OffenBoost hat uns Fachkräfte gebracht, die andere Kanzleien vergeblich suchen.",
@@ -495,6 +518,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Jochen Beck",
+    role: "Steuerberater",
     company: "Beck Steuerberatung",
     image: "/testimonials/jochen-beck.jpg",
     quote: "Generationswechsel geschafft – mit einem Team, das bleibt und einem Gewinn, der stimmt. OffenBoost hat beides geliefert.",
@@ -516,6 +540,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Ulrich Bierhaus",
+    role: "Steuerberater & vereid. Buchprüfer",
     company: "Bierhaus & Partner",
     image: "/testimonials/ulrich-bierhaus.jpg",
     quote: "Internationale Mandanten aus Japan und Deutschland betreuen – dafür brauchst du die besten Leute. OffenBoost hat sie uns gebracht.",
@@ -537,6 +562,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     name: "Martin Witte",
+    role: "Steuerberater",
     company: "Steuerkanzlei Witte",
     image: "/testimonials/martin-witte.jpg",
     quote: "Die Qualität unserer Mandanten hat sich komplett verändert. Nur noch A-Mandanten, eine Gewinnmarge über 65% und ein Team, das bleibt.",
@@ -559,6 +585,7 @@ const caseStudies: CaseStudy[] = [
   // Fahrschulen
   {
     name: "Thomas Schille",
+    role: "Inhaber",
     company: "Fahrschule Schille",
     image: "/testimonials/thomas-schille.png",
     quote: "50 neue Fahrschüler in einem Monat – das sind über 175.000€ Umsatz. OffenBoost hat uns zur Top-Fahrschule in Stuttgart gemacht.",
@@ -851,6 +878,7 @@ const Casestudies = () => {
                     <div className="flex items-center justify-between">
                       <div>
                         <p className="font-bold text-secondary-foreground">{study.name}</p>
+                        {study.role && <p className="text-xs text-secondary-foreground/60">{study.role}</p>}
                         <p className="text-sm text-secondary-foreground/70">{study.company}</p>
                       </div>
                       <div className="bg-card/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold text-secondary-foreground">
