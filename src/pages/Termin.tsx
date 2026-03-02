@@ -105,7 +105,7 @@ const Termin = () => {
             <div className="bg-card rounded-2xl overflow-hidden shadow-card border border-border animate-fade-in-up">
               <div
                 className="calendly-inline-widget"
-                data-url="https://calendly.com/offenboost/erstgespraech?hide_landing_page_details=1&hide_event_type_details=1&hide_gdpr_banner=1&primary_color=3b82f6"
+                data-url="https://calendly.com/yusuf-leyaltech/profit-session?hide_landing_page_details=1&hide_event_type_details=1&hide_gdpr_banner=1&primary_color=0073e6"
                 style={{ minWidth: "320px", height: "700px" }}
               />
             </div>
