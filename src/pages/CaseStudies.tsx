@@ -141,6 +141,28 @@ const caseStudies: CaseStudy[] = [
     },
   },
   {
+    name: "Hasim Pacal",
+    role: "Geschäftsführer",
+    company: "Kerkhoff Experts GmbH",
+    image: "/testimonials/hasim-pacal.jpg",
+    quote: "OffenBoost hat unsere Expertenvermittlung auf ein neues Level gebracht. Wir platzieren jetzt doppelt so viele Interim Manager im Einkauf und Supply Chain – und die Kunden kommen von selbst.",
+    headline: "Vermittlungsvolumen um 120% gesteigert und DAX-Konzerne als Neukunden gewonnen",
+    category: "recruiting",
+    results: [
+      "Vermittlungsvolumen um 120% gesteigert durch automatisierte Akquise",
+      "DAX-Konzerne als neue Auftraggeber für Interim Management gewonnen",
+      "Time-to-Fill für Einkaufs- und Supply-Chain-Experten halbiert",
+    ],
+    metric: {
+      label: "Vermittlungsvolumen",
+      value: 120,
+      suffix: "%",
+      prefix: "+",
+      direction: "up",
+      description: "gesteigert"
+    },
+  },
+  {
     name: "Nordin Begdouri",
     role: "Geschäftsführer",
     company: "SalesWorx",

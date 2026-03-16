@@ -134,6 +134,26 @@ const testimonials: Testimonial[] = [
     ],
   },
   {
+    quote: "OffenBoost hat unsere Expertenvermittlung auf ein neues Level gebracht. Wir platzieren jetzt doppelt so viele Interim Manager im Einkauf und Supply Chain – und die Kunden kommen von selbst.",
+    name: "Hasim Pacal",
+    role: "Geschäftsführer",
+    company: "Kerkhoff Experts GmbH",
+    image: "/testimonials/hasim-pacal.jpg",
+    category: "recruiting",
+    metric: {
+      label: "Vermittlungsvolumen",
+      value: 120,
+      suffix: "%",
+      prefix: "+",
+      direction: "up",
+      description: "gesteigert",
+    },
+    results: [
+      "Vermittlungsvolumen um 120% gesteigert durch automatisierte Akquise",
+      "Neue DAX-Konzerne als Auftraggeber gewonnen",
+    ],
+  },
+  {
     quote: "Seitdem das System läuft, fühlt sich Sales wie Cheaten an.",
     name: "Nordin Begdouri",
     role: "Geschäftsführer",
