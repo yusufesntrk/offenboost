@@ -1,11 +1,11 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { Play, Check, TrendingUp, TrendingDown, Star, Building2, Users, Stethoscope } from "lucide-react";
+import { Play, Check, TrendingUp, TrendingDown, Star, Building2, Users, Stethoscope, UtensilsCrossed } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import SEO from "@/components/SEO";
 import { PAGE_SEO } from "@/lib/seo-config";
 
-type Category = "alle" | "recruiting" | "kanzleien" | "praxen" | "fahrschulen";
+type Category = "alle" | "recruiting" | "kanzleien" | "praxen" | "fahrschulen" | "restaurants";
 
 interface CaseStudy {
   name: string;
@@ -650,6 +650,30 @@ const caseStudies: CaseStudy[] = [
       description: "Steigerung durch gezieltes Marketing",
     },
   },
+  // Restaurants
+  {
+    name: "Dr. Frieder Baldner",
+    role: "Inhaber",
+    company: "Baldner's Gasthof Schwanen",
+    quote:
+      "Seit über 200 Jahren führen wir den Gasthof Schwanen in fünfter Generation. Mit OffenBoost haben wir den Sprung ins digitale Zeitalter geschafft — unsere Online-Reservierungen haben sich verdreifacht und wir erreichen endlich auch die jüngere Zielgruppe.",
+    headline: "Traditionsrestaurant seit 1820 erobert die digitale Welt",
+    results: [
+      "Google-Sichtbarkeit von Seite 3 auf Position 1 für 'Restaurant Kehl'",
+      "Online-Reservierungen um 210% gesteigert in 4 Monaten",
+      "Automatisierte Bewertungsanfragen erhöhen Google-Rating auf 4,8 Sterne",
+      "Social-Media-Präsenz aufgebaut mit 35% mehr Laufkundschaft",
+    ],
+    category: "restaurants",
+    metric: {
+      label: "Online-Reservierungen",
+      value: 210,
+      suffix: "%",
+      prefix: "+",
+      direction: "up",
+      description: "Steigerung durch digitale Sichtbarkeit",
+    },
+  },
 ];
 
 const categories: { key: Category; label: string; icon: React.ElementType }[] = [
@@ -658,6 +682,7 @@ const categories: { key: Category; label: string; icon: React.ElementType }[] = 
   { key: "kanzleien", label: "Kanzleien", icon: Building2 },
   { key: "praxen", label: "Praxen", icon: Stethoscope },
   { key: "fahrschulen", label: "Fahrschulen", icon: Users },
+  { key: "restaurants", label: "Restaurants", icon: UtensilsCrossed },
 ];
 
 // Animated Counter Component

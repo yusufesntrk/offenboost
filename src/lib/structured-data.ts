@@ -290,6 +290,13 @@ export const testimonialReviews = [
     quote:
       "Durch OffenBoost haben wir nicht nur deutlich mehr Patienten gewonnen, sondern auch unsere komplette Praxisverwaltung automatisiert.",
   },
+  {
+    name: "Dr. Frieder Baldner",
+    role: "Inhaber",
+    company: "Baldner's Gasthof Schwanen",
+    quote:
+      "Seit über 200 Jahren führen wir den Gasthof Schwanen in fünfter Generation. Mit OffenBoost haben wir den Sprung ins digitale Zeitalter geschafft.",
+  },
 ];
 
 // LocalBusiness Schema - für lokale Suchergebnisse

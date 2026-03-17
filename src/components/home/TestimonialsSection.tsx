@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
-type Category = "alle" | "recruiting" | "kanzleien" | "praxen" | "fahrschulen";
+type Category = "alle" | "recruiting" | "kanzleien" | "praxen" | "fahrschulen" | "restaurants";
 
 interface Testimonial {
   quote: string;
@@ -598,6 +598,28 @@ const testimonials: Testimonial[] = [
       "E-Mail-Automationen für Recall, Bewertungen und Nachsorge",
     ],
   },
+  // Restaurants
+  {
+    quote:
+      "Seit über 200 Jahren führen wir den Gasthof Schwanen in fünfter Generation. Mit OffenBoost haben wir den Sprung ins digitale Zeitalter geschafft — unsere Online-Reservierungen haben sich verdreifacht und wir erreichen endlich auch die jüngere Zielgruppe.",
+    name: "Dr. Frieder Baldner",
+    role: "Inhaber",
+    company: "Baldner's Gasthof Schwanen",
+    category: "restaurants",
+    metric: {
+      label: "Online-Reservierungen",
+      value: 210,
+      suffix: "%",
+      prefix: "+",
+      direction: "up",
+      description: "Steigerung durch digitale Sichtbarkeit",
+    },
+    results: [
+      "Google-Sichtbarkeit von Seite 3 auf Position 1 für 'Restaurant Kehl'",
+      "Online-Reservierungen um 210% gesteigert in 4 Monaten",
+      "Automatisierte Bewertungsanfragen erhöhen Google-Rating auf 4,8 Sterne",
+    ],
+  },
 ];
 
 const categories: { key: Category; label: string }[] = [
@@ -606,6 +628,7 @@ const categories: { key: Category; label: string }[] = [
   { key: "kanzleien", label: "Kanzleien" },
   { key: "praxen", label: "Praxen" },
   { key: "fahrschulen", label: "Fahrschulen" },
+  { key: "restaurants", label: "Restaurants" },
 ];
 
 // Animated Counter Component
