@@ -11,12 +11,39 @@
 - **Yusuf Esentürk** - Co-Founder
 - **Manuel Engelhardt** - Co-Founder
 
+## Positionierung & Zielgruppe
+
+**Kernzielgruppe:** Recruiting-Agenturen (Personalvermittler, Headhunter, Staffing-Firmen)
+**Kernversprechen:** Mehr Sales, mehr Umsatz, alles automatisiert
+
+**Sekundäre Zielgruppen:** Kanzleien, Praxen, Fahrschulen, Restaurants — gleiche Methodik (Marketing + Automatisierung), andere Branche.
+
+Die Homepage fokussiert auf Recruiting-Agenturen. Testimonials zeigen Breite über alle Branchen — das ist gewollt.
+
+## Blog / Content-Strategie
+
+**Primärer Fokus (80% der Artikel):** Themen für Recruiting-Agenturen:
+- Sales-Systeme & Sales-Prozesse für Recruiting-Agenturen
+- CRM-Systeme, Pipeline-Management, Automatisierung
+- Wie man als Recruiter mehr Kunden/Aufträge gewinnt
+- Cold Outreach, LinkedIn Akquise, Reverse Recruiting
+- Wachstumshebel: richtige Kandidaten finden, Nischen-Positionierung, Marktanalyse
+- Was im aktuellen Recruiting-Sales schiefläuft
+- Fulfillment optimieren, Prozesse skalieren
+
+**Sekundärer Fokus (20%):** Branchen-Content:
+- Kanzlei-Marketing, Fahrschule-Werbung, Praxis-Marketing
+- Allgemeine Automatisierung & Digitalisierung für KMU
+
+**Tonalität:** Direkt, praxisnah, keine Buzzwords. Wie ein erfahrener Berater der Klartext redet.
+
 ## Tech Stack
 
-- React + TypeScript + Vite
-- Tailwind CSS
-- shadcn/ui Komponenten
+- Astro 5 + React Islands + TypeScript
+- Tailwind CSS 4
 - Lucide React Icons
+- Astro Content Collections für Blog
+- Cloudflare Pages Deployment
 
 ## Style Guide
 
