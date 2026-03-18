@@ -1,15 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { PAGE_SEO } from '../lib/seo-config';
+import { generateBreadcrumbSchema } from '../lib/structured-data';
 
 // React Island for interactive case studies
 import CasestudiesSection from '../components/react/CasestudiesSection';
+
+const casestudiesSchema = generateBreadcrumbSchema([
+  { name: "Startseite", url: "/" },
+  { name: "Case Studies", url: "/casestudies" },
+]);
 ---
 
 <BaseLayout
   title={PAGE_SEO.casestudies.title}
   description={PAGE_SEO.casestudies.description}
   canonical="/casestudies"
+  structuredData={casestudiesSchema}
 >
   <CasestudiesSection client:load />
 </BaseLayout>

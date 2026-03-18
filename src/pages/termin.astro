@@ -1,7 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { PAGE_SEO } from '../lib/seo-config';
-import { bookingHowToSchema } from '../lib/structured-data';
+import { bookingHowToSchema, generateBreadcrumbSchema } from '../lib/structured-data';
+
+const terminSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    bookingHowToSchema,
+    generateBreadcrumbSchema([
+      { name: "Startseite", url: "/" },
+      { name: "Erstgespräch buchen", url: "/termin" },
+    ]),
+  ],
+};
 import { Check, Calendar, Clock, Video } from 'lucide-react';
 
 const benefits = [
@@ -32,7 +43,7 @@ const benefits = [
   title={PAGE_SEO.termin.title}
   description={PAGE_SEO.termin.description}
   canonical="/termin"
-  structuredData={bookingHowToSchema}
+  structuredData={terminSchema}
 >
   <main class="py-12 md:py-20 px-4 md:px-8">
     <div class="max-w-6xl mx-auto">
