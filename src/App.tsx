@@ -1,32 +1,44 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import Index from "./pages/Index";
-import Termin from "./pages/Termin";
-import Leistungen from "./pages/Leistungen";
-import UeberUns from "./pages/UeberUns";
-import Impressum from "./pages/Impressum";
-import Datenschutz from "./pages/Datenschutz";
-import AGB from "./pages/AGB";
-import NotFound from "./pages/NotFound";
-import CaseStudies from "./pages/CaseStudies";
 
-const queryClient = new QueryClient();
+// Lazy load all page components
+const Index = lazy(() => import("./pages/Index"));
+const Termin = lazy(() => import("./pages/Termin"));
+const Leistungen = lazy(() => import("./pages/Leistungen"));
+const UeberUns = lazy(() => import("./pages/UeberUns"));
+const CaseStudies = lazy(() => import("./pages/CaseStudies"));
+const Impressum = lazy(() => import("./pages/Impressum"));
+const Datenschutz = lazy(() => import("./pages/Datenschutz"));
+const AGB = lazy(() => import("./pages/AGB"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+
+// Lazy load toasters - they are only needed when a toast is triggered
+const Toaster = lazy(() =>
+  import("@/components/ui/toaster").then((m) => ({ default: m.Toaster }))
+);
+const Sonner = lazy(() =>
+  import("@/components/ui/sonner").then((m) => ({ default: m.Toaster }))
+);
+
+// Suspense wrapper to avoid repetition in route config
+const SuspensePage = ({ children }: { children: React.ReactNode }) => (
+  <Suspense fallback={<div className="min-h-screen bg-background" />}>
+    {children}
+  </Suspense>
+);
 
 const router = createBrowserRouter(
   [
-    { path: "/", element: <Index /> },
-    { path: "/termin", element: <Termin /> },
-    { path: "/leistungen", element: <Leistungen /> },
-    { path: "/ueber-uns", element: <UeberUns /> },
-    { path: "/casestudies", element: <CaseStudies /> },
-    { path: "/impressum", element: <Impressum /> },
-    { path: "/datenschutz", element: <Datenschutz /> },
-    { path: "/agb", element: <AGB /> },
-    { path: "*", element: <NotFound /> },
+    { path: "/", element: <SuspensePage><Index /></SuspensePage> },
+    { path: "/termin", element: <SuspensePage><Termin /></SuspensePage> },
+    { path: "/leistungen", element: <SuspensePage><Leistungen /></SuspensePage> },
+    { path: "/ueber-uns", element: <SuspensePage><UeberUns /></SuspensePage> },
+    { path: "/casestudies", element: <SuspensePage><CaseStudies /></SuspensePage> },
+    { path: "/impressum", element: <SuspensePage><Impressum /></SuspensePage> },
+    { path: "/datenschutz", element: <SuspensePage><Datenschutz /></SuspensePage> },
+    { path: "/agb", element: <SuspensePage><AGB /></SuspensePage> },
+    { path: "*", element: <SuspensePage><NotFound /></SuspensePage> },
   ],
   {
     future: {
@@ -37,13 +49,11 @@ const router = createBrowserRouter(
 
 const App = () => (
   <HelmetProvider>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <RouterProvider router={router} future={{ v7_startTransition: true }} />
-      </TooltipProvider>
-    </QueryClientProvider>
+    <Suspense fallback={null}>
+      <Toaster />
+      <Sonner />
+    </Suspense>
+    <RouterProvider router={router} future={{ v7_startTransition: true }} />
   </HelmetProvider>
 );
 
