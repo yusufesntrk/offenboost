@@ -36,10 +36,37 @@
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.offenboost.de/" />
+
+    <!-- Redirect non-www to www -->
+    <script>
+      if (location.hostname === 'offenboost.de' || location.hostname === 'offenboost.com' || location.hostname === 'www.offenboost.com') {
+        location.replace('https://www.offenboost.de' + location.pathname + location.search + location.hash);
+      }
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
+    <!-- SEO: Statischer Fallback für Crawler ohne JavaScript -->
+    <noscript>
+      <div style="padding: 2rem; max-width: 800px; margin: 0 auto; font-family: system-ui, sans-serif;">
+        <h1>OffenBoost | Wachstumspartner aus Offenburg</h1>
+        <p>Wir boosten Ihr Marketing, Sales, Webprojekt und Business.</p>
+        <p>Ihr Wachstumspartner aus Offenburg. Marketing, Sales-Systeme, Webentwicklung und Beratung aus einer Hand.</p>
+        <p>Von Lead-Generierung über Sales-Automation bis zur Web-Entwicklung – wir liefern Wachstumslösungen aus einer Hand.</p>
+        <h2>Unsere Leistungen</h2>
+        <ul>
+          <li>Marketing & Growth</li>
+          <li>Sales-Systeme & CRM</li>
+          <li>Recruiting & HR</li>
+          <li>Automatisierung & Digitalisierung</li>
+          <li>Webentwicklung</li>
+          <li>Beratung</li>
+        </ul>
+        <p>Kontakt: info@offenboost.de | Burdastraße 18, 77656 Offenburg</p>
+        <p><a href="/termin">Erstgespräch buchen</a></p>
+      </div>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
