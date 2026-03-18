@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { PAGE_SEO, SITE_CONFIG } from '../../lib/seo-config';
+import { generateBreadcrumbSchema } from '../../lib/structured-data';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const blogBreadcrumbs = generateBreadcrumbSchema([
+  { name: 'Startseite', url: '/' },
+  { name: 'Blog', url: '/blog' },
+]);
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('de-DE', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
+function estimateReadingTime(body: string): number {
+  const words = body.split(/\s+/).length;
+  return Math.ceil(words / 200);
+}
+---
+
+<BaseLayout
+  title={PAGE_SEO.blog.title}
+  description={PAGE_SEO.blog.description}
+  canonical="/blog"
+  structuredData={blogBreadcrumbs}
+>
+  <!-- Hero -->
+  <section class="pt-12 pb-8 px-4 md:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="badge-floating mb-6 inline-flex">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+          <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/>
+          <path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/>
+        </svg>
+        Blog & Insights
+      </span>
+      <h1 class="section-heading mb-4">
+        Wissen für Ihr <span class="gradient-text">Wachstum</span>
+      </h1>
+      <p class="section-subheading mx-auto">
+        Praxisnahe Strategien und Insights zu Recruiting, Marketing und Automatisierung für kleine und mittelständische Unternehmen.
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="pb-20 px-4 md:px-8">
+    <div class="max-w-4xl mx-auto">
+      {posts.length === 0 ? (
+        <div class="text-center py-20">
+          <p class="text-muted-foreground text-lg">Noch keine Beiträge vorhanden.</p>
+        </div>
+      ) : (
+        <div class="grid gap-6">
+          {posts.map((post, index) => (
+            <a
+              href={`/blog/${post.id}`}
+              class:list={[
+                'group block bg-card rounded-2xl shadow-card border border-border/50 overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/20',
+                index === 0 ? 'md:grid md:grid-cols-1' : '',
+              ]}
+            >
+              <div class="p-6 md:p-8">
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                  {post.data.tags.slice(0, 3).map((tag) => (
+                    <span class="text-xs font-medium px-3 py-1 rounded-full bg-primary/10 text-primary">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <h2 class="text-xl md:text-2xl font-bold text-secondary group-hover:text-primary transition-colors mb-3">
+                  {post.data.title}
+                </h2>
+                <p class="text-muted-foreground mb-4 line-clamp-2">
+                  {post.data.description}
+                </p>
+                <div class="flex items-center gap-4 text-sm text-muted-foreground">
+                  <span class="flex items-center gap-1.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/>
+                    </svg>
+                    {formatDate(post.data.date)}
+                  </span>
+                  <span class="flex items-center gap-1.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    {estimateReadingTime(post.body || '')} Min. Lesezeit
+                  </span>
+                  <span class="flex items-center gap-1.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    {post.data.author}
+                  </span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="pb-20 px-4 md:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-secondary rounded-3xl p-8 md:p-12 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+          Bereit, Ihr Wachstum zu starten?
+        </h2>
+        <p class="text-white/70 mb-8 max-w-xl mx-auto">
+          Lassen Sie uns in einem kostenlosen Erstgespräch herausfinden, wie wir Ihr Unternehmen voranbringen können.
+        </p>
+        <a
+          href="/termin"
+          class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors bg-primary text-white shadow hover:bg-primary/90 h-11 rounded-full px-8 text-base"
+        >
+          Kostenloses Erstgespräch buchen
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

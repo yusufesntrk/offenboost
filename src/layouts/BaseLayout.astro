@@ -32,6 +32,13 @@ const imageUrl = ogImage.startsWith('http') ? ogImage : `${SITE_CONFIG.url}${ogI
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Non-www to www redirect (client-side fallback) -->
+    <script is:inline>
+      if (location.hostname === 'offenboost.de' || location.hostname === 'offenboost.com' || location.hostname === 'www.offenboost.com') {
+        location.replace('https://www.offenboost.de' + location.pathname + location.search + location.hash);
+      }
+    </script>
+
     <!-- Primary Meta Tags -->
     <title>{title}</title>
     <meta name="description" content={description} />
