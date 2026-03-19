@@ -862,6 +862,7 @@ const CasestudiesSection = () => {
                     <img
                       src={study.image}
                       alt={study.name}
+                      loading="lazy"
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;

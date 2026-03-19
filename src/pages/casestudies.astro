@@ -1,15 +1,53 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { PAGE_SEO } from '../lib/seo-config';
+import { PAGE_SEO, SITE_CONFIG } from '../lib/seo-config';
 import { generateBreadcrumbSchema } from '../lib/structured-data';
 
 // React Island for interactive case studies
 import CasestudiesSection from '../components/react/CasestudiesSection';
 
-const casestudiesSchema = generateBreadcrumbSchema([
-  { name: "Startseite", url: "/" },
-  { name: "Case Studies", url: "/casestudies" },
-]);
+const caseStudyNames = [
+  "Yasar Sentürk – searched GmbH",
+  "Rüdiger Bruns – AMONOVA GmbH",
+  "Dr. Thomas Wendel – tw.con. GmbH",
+  "Bahadir Battal – VeraPartners Leadership",
+  "Alireza Nikjou – Experiton UG",
+  "Hasim Pacal – Kerkhoff Experts GmbH",
+  "Nordin Begdouri – SalesWorx",
+  "Jürgen Berger – B&L Berger Lindzus Lutz",
+  "Christian Eckhardt – Quentin / Quitter & Eckhardt",
+  "Martina Kronbiegel – Kanzlei Kronbiegel",
+  "Marc Wüst – adam, wüst & partner",
+  "Florian Rendler – Rendler & Hoferer",
+  "Peter Gilpert – Gilpert & Kollegen",
+  "Anette Benzing – adfontis Steuerberatung",
+  "Ina Neumann – Steuerkanzlei Neumann",
+  "Gunther Bartholomä – Bartholomä Kanzlei",
+  "Dr. Ralf Schauer – Dr. Schauer Steuerberater",
+  "Oliver Reichelt – Reichelt Steuerberatung",
+  "Harry Kressl – Pfefferle Gruppe",
+];
+
+const casestudiesSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    generateBreadcrumbSchema([
+      { name: "Startseite", url: "/" },
+      { name: "Case Studies", url: "/casestudies" },
+    ]),
+    {
+      "@type": "ItemList",
+      "name": "OffenBoost Case Studies & Erfolgsgeschichten",
+      "numberOfItems": caseStudyNames.length,
+      "itemListElement": caseStudyNames.map((name, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "name": name,
+        "url": `${SITE_CONFIG.url}/casestudies`,
+      })),
+    },
+  ],
+};
 ---
 
 <BaseLayout

@@ -47,9 +47,6 @@ Allow: /
 # === Default ===
 User-agent: *
 Allow: /
-
-# === Sitemaps ===
-Sitemap: https://www.offenboost.de/sitemap-index.xml
-
-# === Disallow ===
 Disallow: /api/
+
+Sitemap: https://www.offenboost.de/sitemap-index.xml

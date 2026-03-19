@@ -17,11 +17,11 @@ function isActive(href: string): boolean {
 }
 ---
 
-<nav class="w-full py-4 px-4 md:px-8">
+<nav class="w-full py-4 px-4 md:px-8" aria-label="Hauptnavigation">
   <div class="max-w-6xl mx-auto">
     <div class="flex items-center justify-between bg-card rounded-2xl px-6 py-3 shadow-card border border-border/50">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 min-h-[44px]">
+      <a href="/" class="flex items-center gap-2 min-h-[44px]" aria-label="OffenBoost Startseite">
         <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
             <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
@@ -47,13 +47,115 @@ function isActive(href: string): boolean {
         ))}
       </div>
 
-      <!-- CTA Button -->
+      <!-- CTA Button (Desktop) -->
       <a
         href="/termin"
-        class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 rounded-full px-4 text-sm"
+        class="hidden md:inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 rounded-full px-4 text-sm"
       >
         Erstgespräch
       </a>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button
+        id="mobile-menu-toggle"
+        type="button"
+        class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-secondary hover:bg-muted transition-colors"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <!-- Hamburger Icon -->
+        <svg id="icon-hamburger" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="6" x2="20" y2="6" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="18" x2="20" y2="18" />
+        </svg>
+        <!-- Close Icon (hidden by default) -->
+        <svg id="icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div
+      id="mobile-menu"
+      class="md:hidden overflow-hidden transition-all duration-300 ease-in-out"
+      style="max-height: 0; opacity: 0;"
+    >
+      <div class="flex flex-col gap-1 pt-3 pb-4 px-2">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'mobile-nav-link block rounded-xl px-4 py-3 text-base font-medium transition-colors',
+              isActive(link.href)
+                ? 'bg-primary/10 text-primary'
+                : 'text-secondary hover:bg-muted',
+            ]}
+          >
+            {link.label}
+          </a>
+        ))}
+        <div class="pt-2 px-2">
+          <a
+            href="/termin"
+            class="mobile-nav-link block w-full text-center rounded-full bg-primary text-primary-foreground font-medium py-3 px-4 shadow hover:bg-primary/90 transition-colors"
+          >
+            Erstgespräch
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('mobile-menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const iconHamburger = document.getElementById('icon-hamburger');
+    const iconClose = document.getElementById('icon-close');
+    const mobileLinks = menu?.querySelectorAll('.mobile-nav-link');
+
+    if (!toggle || !menu || !iconHamburger || !iconClose) return;
+
+    let isOpen = false;
+
+    function openMenu() {
+      isOpen = true;
+      menu.style.maxHeight = menu.scrollHeight + 'px';
+      menu.style.opacity = '1';
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', 'Menü schließen');
+      iconHamburger.classList.add('hidden');
+      iconClose.classList.remove('hidden');
+    }
+
+    function closeMenu() {
+      isOpen = false;
+      menu.style.maxHeight = '0';
+      menu.style.opacity = '0';
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Menü öffnen');
+      iconHamburger.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    }
+
+    toggle.addEventListener('click', () => {
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    // Close menu when a link is clicked
+    mobileLinks?.forEach((link) => {
+      link.addEventListener('click', () => {
+        closeMenu();
+      });
+    });
+  });
+</script>

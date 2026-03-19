@@ -4,14 +4,34 @@ import { PAGE_SEO, SITE_CONFIG } from '../../lib/seo-config';
 import { generateBreadcrumbSchema } from '../../lib/structured-data';
 import { getCollection } from 'astro:content';
 
-const posts = (await getCollection('blog')).sort(
+const sortedPosts = (await getCollection('blog')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 
-const blogBreadcrumbs = generateBreadcrumbSchema([
-  { name: 'Startseite', url: '/' },
-  { name: 'Blog', url: '/blog' },
-]);
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    generateBreadcrumbSchema([
+      { name: 'Startseite', url: '/' },
+      { name: 'Blog', url: '/blog' },
+    ]),
+    {
+      '@type': 'CollectionPage',
+      name: PAGE_SEO.blog.title,
+      description: PAGE_SEO.blog.description,
+      url: `${SITE_CONFIG.url}/blog`,
+      isPartOf: { '@id': `${SITE_CONFIG.url}/#website` },
+      mainEntity: {
+        '@type': 'ItemList',
+        itemListElement: sortedPosts.map((post, idx) => ({
+          '@type': 'ListItem',
+          position: idx + 1,
+          url: `${SITE_CONFIG.url}/blog/${post.id}`,
+        })),
+      },
+    },
+  ],
+};
 
 function formatDate(date: Date): string {
   return date.toLocaleDateString('de-DE', {
@@ -31,7 +51,7 @@ function estimateReadingTime(body: string): number {
   title={PAGE_SEO.blog.title}
   description={PAGE_SEO.blog.description}
   canonical="/blog"
-  structuredData={blogBreadcrumbs}
+  structuredData={blogSchema}
 >
   <!-- Hero -->
   <section class="pt-12 pb-8 px-4 md:px-8">
@@ -55,13 +75,13 @@ function estimateReadingTime(body: string): number {
   <!-- Blog Posts Grid -->
   <section class="pb-20 px-4 md:px-8">
     <div class="max-w-4xl mx-auto">
-      {posts.length === 0 ? (
+      {sortedPosts.length === 0 ? (
         <div class="text-center py-20">
           <p class="text-muted-foreground text-lg">Noch keine Beiträge vorhanden.</p>
         </div>
       ) : (
         <div class="grid gap-6">
-          {posts.map((post, index) => (
+          {sortedPosts.map((post, index) => (
             <a
               href={`/blog/${post.id}`}
               class:list={[

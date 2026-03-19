@@ -42,6 +42,7 @@ export const coFounderSchema = {
     "Performance Marketing",
     "Fachkräftegewinnung",
   ],
+  sameAs: ["https://www.linkedin.com/in/manuel-engelhardt-a56b43171/"],
 };
 
 // Organization Schema
@@ -52,6 +53,7 @@ export const organizationSchema = {
   name: SITE_CONFIG.company.name,
   legalName: SITE_CONFIG.company.legalName,
   url: SITE_CONFIG.url,
+  foundingDate: "2024",
   logo: `${SITE_CONFIG.url}/logo.svg`,
   email: SITE_CONFIG.company.email,
   address: {

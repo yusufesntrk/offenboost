@@ -39,7 +39,7 @@ export const SITE_CONFIG = {
 export const PAGE_SEO = {
   home: {
     title: "OffenBoost – Recruiting, Marketing & Automatisierung",
-    description: "Planbar wachsen mit OffenBoost aus Offenburg. Wir verbinden Recruiting, Marketing & Automatisierung zu einem System – für messbare Ergebnisse in der DACH-Region. Jetzt Erstgespräch buchen.",
+    description: "Planbar wachsen mit OffenBoost aus Offenburg. Recruiting, Marketing & Automatisierung als System – für messbare Ergebnisse in der DACH-Region.",
     keywords: "Recruiting Offenburg, Marketing Agentur Offenburg, Automatisierung KMU, Fachkräfte finden, Performance Marketing, Sales Automatisierung, Digitalisierung Mittelstand",
   },
   termin: {
@@ -53,12 +53,12 @@ export const PAGE_SEO = {
     keywords: "Case Studies, Erfolgsgeschichten, Kundenreferenzen, Wachstum, Recruiting Erfolg",
   },
   leistungen: {
-    title: "Unsere Leistungen | OffenBoost",
+    title: "Marketing, Sales & Automatisierung | OffenBoost",
     description: "Recruiting, Performance Marketing & Automatisierung aus einer Hand. Entdecken Sie die OffenBoost-Leistungen für planbares Wachstum in der DACH-Region.",
     keywords: "Leistungen, Recruiting, Marketing, Automatisierung, Digitalisierung",
   },
   ueberuns: {
-    title: "Über uns | OffenBoost",
+    title: "Über OffenBoost — Yusuf Esentürk & Manuel Engelhardt",
     description: "Lernen Sie Yusuf Esentürk und Manuel Engelhardt kennen – die Gründer von OffenBoost aus Offenburg. Erfahren Sie, wie wir Unternehmen planbar wachsen lassen.",
     keywords: "Über uns, Team, Gründer, Offenburg",
   },
@@ -81,8 +81,8 @@ export const PAGE_SEO = {
     noindex: true,
   },
   blog: {
-    title: "Blog & Insights | OffenBoost",
-    description: "Praxisnahe Strategien und Insights zu Recruiting, Marketing und Automatisierung für KMU. Wissen für Ihr Unternehmenswachstum.",
+    title: "Recruiting & Marketing Blog | OffenBoost",
+    description: "Praxisnahe Strategien zu Recruiting, Sales und Automatisierung für Personaldienstleister und KMU. Insights aus Offenburg für planbares Wachstum in der DACH-Region.",
     keywords: "Blog, Recruiting Tipps, Marketing KMU, Automatisierung, Fachkräftemangel, Wachstum",
   },
   notFound: {

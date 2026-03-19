@@ -10,6 +10,7 @@ interface Props {
   canonical?: string;
   noindex?: boolean;
   ogImage?: string;
+  ogType?: string;
   structuredData?: object;
 }
 
@@ -19,6 +20,7 @@ const {
   canonical = '',
   noindex = false,
   ogImage = SITE_CONFIG.ogImage,
+  ogType = 'website',
   structuredData,
 } = Astro.props;
 
@@ -31,6 +33,9 @@ const imageUrl = ogImage.startsWith('http') ? ogImage : `${SITE_CONFIG.url}${ogI
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
     <!-- Non-www to www redirect (client-side fallback) -->
     <script is:inline>
@@ -43,7 +48,7 @@ const imageUrl = ogImage.startsWith('http') ? ogImage : `${SITE_CONFIG.url}${ogI
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="author" content={SITE_CONFIG.company.name} />
-    <link rel="canonical" href={fullUrl} />
+    {!noindex && <link rel="canonical" href={fullUrl} />}
 
     <!-- Robots -->
     {noindex ? (
@@ -58,7 +63,7 @@ const imageUrl = ogImage.startsWith('http') ? ogImage : `${SITE_CONFIG.url}${ogI
     <link rel="apple-touch-icon" sizes="180x180" href="/logo.png" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={fullUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -74,7 +79,7 @@ const imageUrl = ogImage.startsWith('http') ? ogImage : `${SITE_CONFIG.url}${ogI
     <meta name="twitter:image" content={imageUrl} />
 
     <!-- Theme Color -->
-    <meta name="theme-color" content="#1a1a2e" />
+    <meta name="theme-color" content="#E8EEF4" />
 
     <!-- Structured Data -->
     {structuredData && (

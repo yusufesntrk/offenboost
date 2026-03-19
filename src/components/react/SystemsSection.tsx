@@ -49,7 +49,7 @@ const SystemsSection = () => {
 
   const tabs: { key: TabKey; label: string; emoji: string }[] = [
     { key: "akquise", label: "Akquise & Sales", emoji: "💰" },
-    { key: "fulfillment", label: "Fullfilement", emoji: "📦" },
+    { key: "fulfillment", label: "Fulfillment", emoji: "📦" },
     { key: "profitmargen", label: "Profitmargen", emoji: "📈" },
   ];
 

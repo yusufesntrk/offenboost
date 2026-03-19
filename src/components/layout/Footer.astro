@@ -8,7 +8,7 @@ const currentYear = new Date().getFullYear();
       <div class="grid md:grid-cols-4 gap-8 items-start">
         <!-- Logo & Tagline -->
         <div class="space-y-4 md:col-span-1">
-          <a href="/" class="flex items-center gap-2 min-h-[44px]">
+          <a href="/" class="flex items-center gap-2 min-h-[44px]" aria-label="OffenBoost Startseite">
             <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
                 <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
@@ -67,18 +67,18 @@ const currentYear = new Date().getFullYear();
         <div>
           <h4 class="font-semibold text-foreground mb-4">Leistungen</h4>
           <nav class="flex flex-col gap-1">
-            <span class="text-muted-foreground text-sm py-2 min-h-[44px] flex items-center">
+            <a href="/leistungen" class="text-muted-foreground hover:text-foreground transition-colors text-sm py-2 min-h-[44px] flex items-center">
               Marketing & Growth
-            </span>
-            <span class="text-muted-foreground text-sm py-2 min-h-[44px] flex items-center">
+            </a>
+            <a href="/leistungen" class="text-muted-foreground hover:text-foreground transition-colors text-sm py-2 min-h-[44px] flex items-center">
               Sales-Systeme
-            </span>
-            <span class="text-muted-foreground text-sm py-2 min-h-[44px] flex items-center">
+            </a>
+            <a href="/leistungen" class="text-muted-foreground hover:text-foreground transition-colors text-sm py-2 min-h-[44px] flex items-center">
               Webentwicklung
-            </span>
-            <span class="text-muted-foreground text-sm py-2 min-h-[44px] flex items-center">
+            </a>
+            <a href="/leistungen" class="text-muted-foreground hover:text-foreground transition-colors text-sm py-2 min-h-[44px] flex items-center">
               Beratung
-            </span>
+            </a>
           </nav>
         </div>
 

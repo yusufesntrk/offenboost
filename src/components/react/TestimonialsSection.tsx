@@ -776,6 +776,7 @@ const TestimonialsSection = () => {
                     <img
                       src={testimonial.image}
                       alt={testimonial.name}
+                      loading="lazy"
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
