@@ -754,7 +754,7 @@ const TestimonialsSection = () => {
               <ChevronDown className={`absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
             </button>
             {dropdownOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-card border border-border rounded-2xl shadow-xl py-2 min-w-[180px] z-50">
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-card border border-border rounded-2xl shadow-xl py-2 min-w-[180px] z-50 overflow-hidden">
                 {categories.map((cat) => (
                   <button
                     key={cat.key}
