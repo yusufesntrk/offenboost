@@ -1,4 +1,4 @@
-import { Play, TrendingUp, TrendingDown, ArrowUpRight } from "lucide-react";
+import { Play, TrendingUp, TrendingDown, ArrowUpRight, ChevronDown } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Pagination } from 'swiper/modules';
@@ -730,8 +730,24 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Category Tabs */}
-        <div className="flex justify-center gap-2 mb-8">
+        {/* Category Dropdown (Mobile) */}
+        <div className="flex justify-center mb-8 md:hidden">
+          <div className="relative">
+            <select
+              value={activeCategory}
+              onChange={(e) => setActiveCategory(e.target.value as Category)}
+              className="appearance-none bg-card border border-border rounded-full px-5 py-2.5 pr-10 text-sm font-medium text-secondary min-h-[44px] cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/20"
+            >
+              {categories.map((cat) => (
+                <option key={cat.key} value={cat.key}>{cat.label}</option>
+              ))}
+            </select>
+            <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+          </div>
+        </div>
+
+        {/* Category Tabs (Desktop) */}
+        <div className="hidden md:flex justify-center gap-2 mb-8">
           {categories.map((cat) => (
             <button
               key={cat.key}
