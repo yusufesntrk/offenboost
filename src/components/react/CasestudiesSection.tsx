@@ -774,6 +774,8 @@ const getInitials = (name: string) =>
 const CasestudiesSection = () => {
   const [visibleCards, setVisibleCards] = useState<Set<number>>(new Set());
   const [activeCategory, setActiveCategory] = useState<Category>("alle");
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const filteredCaseStudies =
     activeCategory === "alle"
@@ -808,6 +810,17 @@ const CasestudiesSection = () => {
     setVisibleCards(new Set());
   }, [activeCategory]);
 
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
+
   return (
     <main className="py-12 md:py-20 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
@@ -826,17 +839,31 @@ const CasestudiesSection = () => {
 
         {/* Category Dropdown (Mobile) */}
         <div className="flex justify-center mb-12 md:hidden">
-          <div className="relative">
-            <select
-              value={activeCategory}
-              onChange={(e) => setActiveCategory(e.target.value as Category)}
-              className="appearance-none bg-card border border-border rounded-full px-5 py-2.5 pr-10 text-sm font-medium text-secondary min-h-[44px] cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/20"
+          <div className="relative" ref={dropdownRef}>
+            <button
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              className="flex items-center gap-2 bg-card border border-border rounded-full px-5 py-2.5 pr-10 text-sm font-medium text-secondary min-h-[44px] cursor-pointer"
             >
-              {categories.map((cat) => (
-                <option key={cat.key} value={cat.key}>{cat.label}</option>
-              ))}
-            </select>
-            <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+              {categories.find((c) => c.key === activeCategory)?.label}
+              <ChevronDown className={`absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
+            </button>
+            {dropdownOpen && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-card border border-border rounded-2xl shadow-xl py-2 min-w-[180px] z-50">
+                {categories.map((cat) => (
+                  <button
+                    key={cat.key}
+                    onClick={() => { setActiveCategory(cat.key); setDropdownOpen(false); }}
+                    className={`w-full text-left px-4 py-2.5 text-sm font-medium transition-colors ${
+                      activeCategory === cat.key
+                        ? "bg-primary text-white"
+                        : "text-secondary hover:bg-secondary/5"
+                    }`}
+                  >
+                    {cat.label}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
