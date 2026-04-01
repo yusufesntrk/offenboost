@@ -671,7 +671,7 @@ const caseStudies: CaseStudy[] = [
     },
   },
   {
-    name: "Deniz Dilaver",
+    name: "Hasan Kaya",
     role: "Inhaber",
     company: "DeDi's Tantuni & Grill",
     quote:

@@ -623,7 +623,7 @@ const testimonials: Testimonial[] = [
   {
     quote:
       "Als kleiner Imbiss in Offenburg hatten wir null Online-Präsenz. OffenBoost hat uns innerhalb von 3 Monaten auf 5 Sterne bei Google gebracht und unsere Bestellungen haben sich verdoppelt.",
-    name: "Deniz Dilaver",
+    name: "Hasan Kaya",
     role: "Inhaber",
     company: "DeDi's Tantuni & Grill",
     category: "restaurants",
