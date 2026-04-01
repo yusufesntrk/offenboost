@@ -620,6 +620,26 @@ const testimonials: Testimonial[] = [
       "Automatisierte Bewertungsanfragen erhöhen Google-Rating auf 4,8 Sterne",
     ],
   },
+  {
+    quote:
+      "Als kleiner Imbiss in Offenburg hatten wir null Online-Präsenz. OffenBoost hat uns innerhalb von 3 Monaten auf 5 Sterne bei Google gebracht und unsere Bestellungen haben sich verdoppelt.",
+    name: "Deniz Dilaver",
+    role: "Inhaber",
+    company: "DeDi's Tantuni & Grill",
+    category: "restaurants",
+    metric: {
+      label: "Google-Bewertungen",
+      value: 60,
+      suffix: "",
+      prefix: "+",
+      direction: "up",
+      description: "5-Sterne-Bewertungen aufgebaut",
+    },
+    results: [
+      "Von 0 auf 60 Google-Bewertungen mit perfekten 5,0 Sternen",
+      "Bestellungen verdoppelt durch lokale Sichtbarkeit",
+    ],
+  },
 ];
 
 const categories: { key: Category; label: string }[] = [
