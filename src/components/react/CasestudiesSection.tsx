@@ -674,6 +674,7 @@ const caseStudies: CaseStudy[] = [
     name: "Hasan Kaya",
     role: "Inhaber",
     company: "DeDi's Tantuni & Grill",
+    image: "/testimonials/hasan-kaya.jpg",
     quote:
       "Als kleiner Imbiss in Offenburg hatten wir null Online-Präsenz. OffenBoost hat uns innerhalb von 3 Monaten auf 5 Sterne bei Google gebracht und unsere Bestellungen haben sich verdoppelt.",
     headline: "Offenburger Imbiss von null auf 60 Google-Bewertungen mit 5,0 Sternen",

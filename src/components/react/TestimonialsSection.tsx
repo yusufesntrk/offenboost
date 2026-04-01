@@ -626,6 +626,7 @@ const testimonials: Testimonial[] = [
     name: "Hasan Kaya",
     role: "Inhaber",
     company: "DeDi's Tantuni & Grill",
+    image: "/testimonials/hasan-kaya.jpg",
     category: "restaurants",
     metric: {
       label: "Google-Bewertungen",
