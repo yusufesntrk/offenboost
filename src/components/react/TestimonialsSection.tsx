@@ -800,7 +800,7 @@ const TestimonialsSection = () => {
             <button
               key={cat.key}
               onClick={() => setActiveCategory(cat.key)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all min-h-[44px] ${
+              className={`cursor-pointer px-4 py-2 rounded-full text-sm font-medium transition-all min-h-[44px] ${
                 activeCategory === cat.key
                   ? "bg-primary text-white"
                   : "bg-card text-muted-foreground hover:bg-card/80 border border-border"

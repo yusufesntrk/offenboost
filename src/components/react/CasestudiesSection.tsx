@@ -899,7 +899,7 @@ const CasestudiesSection = () => {
               <button
                 key={cat.key}
                 onClick={() => setActiveCategory(cat.key)}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all min-h-[44px] ${
+                className={`cursor-pointer flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all min-h-[44px] ${
                   activeCategory === cat.key
                     ? "bg-primary text-white shadow-lg shadow-primary/25"
                     : "bg-card text-muted-foreground hover:bg-card/80 border border-border"
