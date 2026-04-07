@@ -604,7 +604,7 @@ const testimonials: Testimonial[] = [
       "OffenBoost hat unser Social Selling komplett transformiert. Durch agentenbasierte Analysen und ein Full-Funnel-Marketing-System gewinnen wir jetzt Mandanten, die vorher unerreichbar waren — und das komplett automatisiert.",
     name: "Jürgen Mildenberger",
     role: "Finanzberater",
-    company: "Telis Finanz",
+    company: "Finanzberatung Mildenberger",
     image: "/testimonials/juergen-mildenberger.jpg",
     category: "finanzdienstleister",
     metric: {
