@@ -1,7 +1,7 @@
-import { Play, Check, TrendingUp, TrendingDown, Star, Building2, Users, Stethoscope, UtensilsCrossed, ChevronDown } from "lucide-react";
+import { Play, Check, TrendingUp, TrendingDown, Star, Building2, Users, Stethoscope, UtensilsCrossed, Landmark, ChevronDown } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
-type Category = "alle" | "recruiting" | "kanzleien" | "praxen" | "fahrschulen" | "restaurants";
+type Category = "alle" | "recruiting" | "kanzleien" | "finanzdienstleister" | "praxen" | "fahrschulen" | "restaurants";
 
 interface CaseStudy {
   name: string;
@@ -647,6 +647,31 @@ const caseStudies: CaseStudy[] = [
     },
   },
   // Restaurants
+  // Finanzdienstleister
+  {
+    name: "Jürgen Mildenberger",
+    role: "Finanzberater",
+    company: "Telis Finanz",
+    image: "/testimonials/juergen-mildenberger.jpg",
+    quote:
+      "OffenBoost hat unser Social Selling komplett transformiert. Durch agentenbasierte Analysen und ein Full-Funnel-Marketing-System gewinnen wir jetzt Mandanten, die vorher unerreichbar waren — und das komplett automatisiert.",
+    headline: "47 neue Mandanten in einem Monat durch AI-gestütztes Social Selling",
+    results: [
+      "47 neue High-Ticket-Mandanten in nur einem Monat durch Social Selling System",
+      "LinkedIn-Reichweite um 380% gesteigert mit AI-gestütztem Content",
+      "Agentenbasierte Lead-Analyse spart 15h pro Woche manuelle Recherche",
+      "Full-Funnel-Pipeline von Cold Outreach bis Abschluss vollständig automatisiert",
+    ],
+    category: "finanzdienstleister",
+    metric: {
+      label: "Neue Mandanten",
+      value: 47,
+      suffix: "",
+      prefix: "+",
+      direction: "up",
+      description: "in nur einem Monat gewonnen",
+    },
+  },
   {
     name: "Dr. Frieder Baldner",
     role: "Inhaber",
@@ -700,6 +725,7 @@ const categories: { key: Category; label: string; icon: React.ElementType }[] = 
   { key: "alle", label: "Alle", icon: Star },
   { key: "recruiting", label: "Recruiting", icon: Users },
   { key: "kanzleien", label: "Kanzleien", icon: Building2 },
+  { key: "finanzdienstleister", label: "Finanzdienstleister", icon: Landmark },
   { key: "praxen", label: "Praxen", icon: Stethoscope },
   { key: "fahrschulen", label: "Fahrschulen", icon: Users },
   { key: "restaurants", label: "Restaurants", icon: UtensilsCrossed },

@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
-type Category = "alle" | "recruiting" | "kanzleien" | "praxen" | "fahrschulen" | "restaurants";
+type Category = "alle" | "recruiting" | "kanzleien" | "finanzdienstleister" | "praxen" | "fahrschulen" | "restaurants";
 
 interface Testimonial {
   quote: string;
@@ -598,6 +598,29 @@ const testimonials: Testimonial[] = [
       "E-Mail-Automationen für Recall, Bewertungen und Nachsorge",
     ],
   },
+  // Finanzdienstleister
+  {
+    quote:
+      "OffenBoost hat unser Social Selling komplett transformiert. Durch agentenbasierte Analysen und ein Full-Funnel-Marketing-System gewinnen wir jetzt Mandanten, die vorher unerreichbar waren — und das komplett automatisiert.",
+    name: "Jürgen Mildenberger",
+    role: "Finanzberater",
+    company: "Telis Finanz",
+    image: "/testimonials/juergen-mildenberger.jpg",
+    category: "finanzdienstleister",
+    metric: {
+      label: "Neue Mandanten",
+      value: 47,
+      suffix: "",
+      prefix: "+",
+      direction: "up",
+      description: "in nur einem Monat gewonnen",
+    },
+    results: [
+      "47 neue High-Ticket-Mandanten in nur einem Monat durch Social Selling System",
+      "LinkedIn-Reichweite um 380% gesteigert mit AI-gestütztem Content",
+      "Agentenbasierte Lead-Analyse spart 15h pro Woche manuelle Recherche",
+    ],
+  },
   // Restaurants
   {
     quote:
@@ -647,6 +670,7 @@ const categories: { key: Category; label: string }[] = [
   { key: "alle", label: "Alle" },
   { key: "recruiting", label: "Recruiting" },
   { key: "kanzleien", label: "Kanzleien" },
+  { key: "finanzdienstleister", label: "Finanzdienstleister" },
   { key: "praxen", label: "Praxen" },
   { key: "fahrschulen", label: "Fahrschulen" },
   { key: "restaurants", label: "Restaurants" },
