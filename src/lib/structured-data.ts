@@ -265,6 +265,13 @@ export const testimonialReviews = [
     quote: "Die Automatisierung hat unsere Prozesse komplett transformiert",
   },
   {
+    name: "Ekrem Topcan",
+    role: "Geschäftsführer",
+    company: "Hohenfeld Search",
+    quote:
+      "Durch OffenBoost haben wir ein optimiertes Selling System bekommen und durch das ATS-System konnte unser Fulfillment um 80% entlastet werden.",
+  },
+  {
     name: "Marc Wüst",
     role: "Steuerberater & Partner",
     company: "adam, wüst & partner",

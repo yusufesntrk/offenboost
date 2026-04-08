@@ -181,6 +181,28 @@ const caseStudies: CaseStudy[] = [
       description: "gesteigert"
     },
   },
+  {
+    name: "Ekrem Topcan",
+    role: "Geschäftsführer",
+    company: "Hohenfeld Search",
+    image: "/testimonials/ekrem-topcan.jpg",
+    quote: "Durch OffenBoost haben wir ein optimiertes Selling System bekommen und durch das ATS-System konnte unser Fulfillment um 80% entlastet werden. Endlich können wir skalieren, ohne im operativen Chaos zu versinken.",
+    headline: "Optimiertes Selling System und 80% weniger Fulfillment-Aufwand durch ATS-Automatisierung",
+    category: "recruiting",
+    results: [
+      "Optimiertes Selling System für planbaren Umsatz aufgebaut",
+      "80% weniger Fulfillment-Aufwand durch ATS-Automatisierung",
+      "Skalierung ohne operatives Chaos durch strukturierte Prozesse",
+    ],
+    metric: {
+      label: "Fulfillment-Aufwand",
+      value: 80,
+      suffix: "%",
+      prefix: "-",
+      direction: "down",
+      description: "im ersten Quartal"
+    },
+  },
   // Kanzleien
   {
     name: "Jürgen Berger",

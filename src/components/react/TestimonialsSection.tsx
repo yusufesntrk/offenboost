@@ -174,6 +174,26 @@ const testimonials: Testimonial[] = [
       "Abschlussrate um 80% gesteigert",
     ],
   },
+  {
+    quote: "Durch OffenBoost haben wir ein optimiertes Selling System bekommen und durch das ATS-System konnte unser Fulfillment um 80% entlastet werden. Endlich können wir skalieren, ohne im operativen Chaos zu versinken.",
+    name: "Ekrem Topcan",
+    role: "Geschäftsführer",
+    company: "Hohenfeld Search",
+    image: "/testimonials/ekrem-topcan.jpg",
+    category: "recruiting",
+    metric: {
+      label: "Fulfillment-Aufwand",
+      value: 80,
+      suffix: "%",
+      prefix: "-",
+      direction: "down",
+      description: "reduziert",
+    },
+    results: [
+      "Optimiertes Selling System für planbaren Umsatz aufgebaut",
+      "80% weniger Fulfillment-Aufwand durch ATS-Automatisierung",
+    ],
+  },
   // Kanzleien
   {
     quote: "Innerhalb von 4 Wochen hatten wir die Steuerfachangestellte eingestellt, die wir seit Monaten gesucht haben. Gleichzeitig haben sich unsere Neumandate verdoppelt.",
