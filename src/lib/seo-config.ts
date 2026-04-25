@@ -85,6 +85,11 @@ export const PAGE_SEO = {
     description: "Praxisnahe Strategien zu Recruiting, Sales und Automatisierung für Personaldienstleister und KMU. Insights aus Offenburg für planbares Wachstum in der DACH-Region.",
     keywords: "Blog, Recruiting Tipps, Marketing KMU, Automatisierung, Fachkräftemangel, Wachstum",
   },
+  fahrschulen: {
+    title: "Fahrschul-Marketing: 50 neue Fahrschüler in 30 Tagen | OffenBoost",
+    description: "Wie Fahrschule Schille mit OffenBoost 50 neue Fahrschüler in 30 Tagen gewonnen hat. 175.000€ Umsatz. Provisionsbasis — du zahlst nur pro Fahrschüler.",
+    keywords: "Fahrschul Marketing, Fahrschüler gewinnen, Meta Ads Fahrschule, Fahrschule Werbung, Fahrschüler Akquise, Fahrschule Online Marketing",
+  },
   notFound: {
     title: "Seite nicht gefunden | OffenBoost",
     description: "Die angeforderte Seite wurde nicht gefunden.",

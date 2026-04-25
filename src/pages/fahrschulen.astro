@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { PAGE_SEO } from '../lib/seo-config';
+import { generateBreadcrumbSchema, generateFAQSchema } from '../lib/structured-data';
+
+import FahrschulenHero from '../components/fahrschulen/FahrschulenHero.astro';
+import PainStack from '../components/fahrschulen/PainStack.astro';
+import SchilleSystem from '../components/fahrschulen/SchilleSystem.astro';
+import SchilleCase from '../components/fahrschulen/SchilleCase.astro';
+import FahrschulenOffer from '../components/fahrschulen/FahrschulenOffer.astro';
+
+import AuditForm from '../components/fahrschulen/AuditForm';
+import FahrschulenFAQ from '../components/fahrschulen/FahrschulenFAQ';
+
+const fahrschulenFAQs = [
+  { question: "Was kostet die Provision?", answer: "Die Provision wird individuell vereinbart und hängt von deiner Region und deinem Angebot ab. Du zahlst nur für tatsächlich gewonnene Fahrschüler — kein Risiko für dich. Die genauen Konditionen besprechen wir im kostenlosen Audit." },
+  { question: "Wie lange dauert der Setup?", answer: "In der Regel steht deine Kampagne innerhalb von 48 Stunden. Wir brauchen nur dein Logo, ein paar Fotos und Infos zu deiner Fahrschule — den Rest machen wir." },
+  { question: "Was wenn keine Fahrschüler kommen?", answer: "Da wir auf Provisionsbasis arbeiten, tragen wir das Risiko mit dir. Wenn keine Fahrschüler kommen, zahlst du nichts. Aber: Das Schille-System ist erprobt und liefert in der Regel innerhalb der ersten Woche erste Anfragen." },
+  { question: "Bin ich an einen Vertrag gebunden?", answer: "Nein. Du kannst jederzeit aufhören. Wir glauben an unsere Ergebnisse, nicht an Knebelverträge. Die meisten Fahrschulen bleiben freiwillig, weil es funktioniert." },
+  { question: "Wie viel Werbebudget brauche ich?", answer: "Wir empfehlen ein Startbudget von 500€ pro Monat, das direkt an Meta (Facebook & Instagram) fließt. Das reicht für deine Stadt, um die ersten Fahrschüler zu gewinnen. Das Budget kannst du jederzeit anpassen." },
+  { question: "Funktioniert das auch in meiner Stadt?", answer: "Ja. Das System ist ortsunabhängig und funktioniert in jeder deutschen Stadt. Wir passen die Zielgruppen-Analyse und Creatives individuell auf deine Region an." },
+];
+
+const fahrschulenSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    generateBreadcrumbSchema([
+      { name: "Startseite", url: "/" },
+      { name: "Fahrschulen", url: "/fahrschulen" },
+    ]),
+    generateFAQSchema(fahrschulenFAQs),
+  ],
+};
+---
+
+<BaseLayout
+  title={PAGE_SEO.fahrschulen.title}
+  description={PAGE_SEO.fahrschulen.description}
+  canonical="/fahrschulen"
+  structuredData={fahrschulenSchema}
+>
+  <FahrschulenHero />
+  <PainStack />
+  <SchilleSystem />
+  <SchilleCase />
+  <FahrschulenOffer />
+  <AuditForm client:visible />
+  <FahrschulenFAQ client:visible faqs={fahrschulenFAQs} />
+
+  <!-- Big CTA -->
+  <section class="py-16 md:py-24 px-4 md:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="relative bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8 md:p-16 border border-primary/20 overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl"></div>
+        <div class="relative text-center">
+          <h2 class="section-heading mb-4">
+            Bereit für mehr <span class="gradient-text">Fahrschüler?</span>
+          </h2>
+          <p class="section-subheading mx-auto mb-8">
+            Fordere jetzt dein kostenloses Audit an und erfahre, wie viele Fahrschüler in deiner Stadt auf dich warten.
+          </p>
+          <a
+            href="#audit-form"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-foreground shadow hover:bg-primary/90 h-12 rounded-full px-8 text-base"
+          >
+            Gratis Audit anfordern
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
