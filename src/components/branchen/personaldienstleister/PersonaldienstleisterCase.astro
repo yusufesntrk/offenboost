@@ -1,0 +1,146 @@
+---
+const testimonials = [
+  {
+    name: "Rüdiger Bruns",
+    company: "AMONOVA GmbH",
+    metric: "5x Sales ROI",
+    quote: "Mit OffenBoost haben wir unseren Sales-ROI verfünffacht. Das System läuft vollautomatisch.",
+    image: "/testimonials/ruediger-bruns.jpg",
+  },
+  {
+    name: "Dr. Thomas Wendel",
+    company: "tw.con. GmbH",
+    metric: "-40% Vermittlungszeit",
+    quote: "Die Automatisierung hat unsere Vermittlungszeit drastisch reduziert. Mehr Output, weniger Aufwand.",
+    image: "/testimonials/thomas-wendel.jpg",
+  },
+  {
+    name: "Bahadir Battal",
+    company: "VeraPartners Leadership",
+    metric: "+65% Sales-Pipeline",
+    quote: "Unsere Pipeline ist um 65% gewachsen. Qualifizierte Leads, die wirklich konvertieren.",
+    image: "/testimonials/bahadir-battal.jpg",
+  },
+  {
+    name: "Alireza Nikjou",
+    company: "Experiton UG",
+    metric: "+300% Sales-Output",
+    quote: "OffenBoost hat unseren Sales-Output verdreifacht — bei gleichem Team und gleichem Budget.",
+    image: "/testimonials/alireza-nikjou.png",
+  },
+  {
+    name: "Hasim Pacal",
+    company: "Kerkhoff Experts GmbH",
+    metric: "+120% Vermittlungsvolumen",
+    quote: "Das Vermittlungsvolumen hat sich mehr als verdoppelt. OffenBoost ist ein echter Multiplikator.",
+    image: "/testimonials/hasim-pacal.jpg",
+  },
+  {
+    name: "Nordin Begdouri",
+    company: "SalesWorx",
+    metric: "+80% Sales-Abschlüsse",
+    quote: "80% mehr Abschlüsse durch systematischen Outreach und automatisierte Qualifizierung.",
+    image: "/testimonials/nordin-begdouri.jpg",
+  },
+  {
+    name: "Ekrem Topcan",
+    company: "Hohenfeld Search",
+    metric: "-80% Fulfillment-Aufwand",
+    quote: "Der Fulfillment-Aufwand ist um 80% gesunken. Wir können jetzt 3x mehr Mandate bearbeiten.",
+    image: "/testimonials/ekrem-topcan.jpg",
+  },
+];
+---
+
+<section class="bg-secondary text-secondary-foreground py-16 md:py-24 px-4 md:px-8">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <p class="text-primary font-medium mb-4">Case Study</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">
+        searched GmbH, Düsseldorf
+      </h2>
+    </div>
+
+    <!-- Content Grid -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- LEFT: Image -->
+      <div>
+        <div class="relative rounded-2xl overflow-hidden">
+          <img
+            src="/testimonials/yasar-sentuerk.png"
+            alt="Yasar Sentürk, Geschäftsführer searched GmbH"
+            class="w-full h-auto rounded-2xl"
+            loading="lazy"
+          />
+        </div>
+        <div class="flex items-center gap-3 mt-4">
+          <span class="text-sm text-secondary-foreground/70">Yasar Sentürk, Geschäftsführer</span>
+        </div>
+      </div>
+
+      <!-- RIGHT: Content -->
+      <div>
+        <!-- Vorher -->
+        <div class="rounded-xl p-5 bg-white/5 border border-white/10 mb-4">
+          <p class="text-xs font-medium uppercase tracking-wider text-destructive mb-2">Vorher</p>
+          <ul class="text-secondary-foreground/80 text-sm list-disc pl-4 space-y-1">
+            <li>Sales nur über Kaltakquise</li>
+            <li>Keine systematische Lead-Generierung</li>
+            <li>Upfront Fees unter Marktniveau</li>
+          </ul>
+        </div>
+
+        <!-- Nachher -->
+        <div class="rounded-xl p-5 bg-primary/10 border border-primary/20 mb-6">
+          <p class="text-xs font-medium uppercase tracking-wider text-primary mb-2">Nachher</p>
+          <ul class="text-secondary-foreground/90 text-sm font-medium list-disc pl-4 space-y-1">
+            <li>Sparkasse als Kunden gewonnen</li>
+            <li>200k Upfront Fee kassiert</li>
+            <li>Automatisierte Sales-Pipeline</li>
+          </ul>
+        </div>
+
+        <!-- Metric Badge -->
+        <div class="mb-6">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary font-bold">
+            200k Upfront Fee &#8593;
+          </span>
+        </div>
+
+        <!-- Quote -->
+        <blockquote class="text-lg text-secondary-foreground/90 italic border-l-4 border-primary pl-4">
+          Dank OffenBoost haben wir die Sparkasse als Kunden gewonnen und direkt eine 200k Upfront Fee kassiert. Reverse Recruiting auf einem ganz anderen Level.
+          <cite class="block mt-2 text-sm text-secondary-foreground/60 not-italic">— Yasar Sentürk, Geschäftsführer</cite>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- More Results -->
+    <div class="mt-16">
+      <h3 class="text-xl font-semibold text-white text-center mb-8">Weitere Erfolgsgeschichten</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {testimonials.map((t) => (
+          <div class="bg-white/5 border border-white/10 rounded-xl p-4">
+            <div class="flex items-center gap-3 mb-3">
+              <img
+                src={t.image}
+                alt={t.name}
+                class="w-10 h-10 rounded-full object-cover"
+                loading="lazy"
+              />
+              <div>
+                <p class="text-sm font-semibold text-white leading-tight">{t.name}</p>
+                <p class="text-xs text-secondary-foreground/60">{t.company}</p>
+              </div>
+            </div>
+            <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary/20 text-primary font-bold text-xs mb-3">
+              {t.metric}
+            </span>
+            <p class="text-sm text-secondary-foreground/80 italic">"{t.quote}"</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

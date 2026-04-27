@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { PAGE_SEO } from '../lib/seo-config';
+import { generateBreadcrumbSchema, generateFAQSchema } from '../lib/structured-data';
+
+import KanzleienHero from '../components/branchen/kanzleien/KanzleienHero.astro';
+import KanzleienPainStack from '../components/branchen/kanzleien/KanzleienPainStack.astro';
+import KanzleienSystem from '../components/branchen/kanzleien/KanzleienSystem.astro';
+import KanzleienCase from '../components/branchen/kanzleien/KanzleienCase.astro';
+import KanzleienOffer from '../components/branchen/kanzleien/KanzleienOffer.astro';
+import KanzleienFAQ from '../components/branchen/kanzleien/KanzleienFAQ';
+
+const faqs = [
+  { question: "Was kostet die Zusammenarbeit?", answer: "Die Kosten hängen vom Umfang ab. Wir arbeiten ergebnisorientiert — ob Fachkräfte-Recruiting oder Mandantengewinnung. Im kostenlosen Erstgespräch erstellen wir ein individuelles Angebot." },
+  { question: "Wie schnell finde ich Fachkräfte?", answer: "Die meisten Kanzleien erhalten bereits innerhalb von 2-4 Wochen qualifizierte Bewerbungen. Erste Einstellungen erfolgen typischerweise nach 4-8 Wochen." },
+  { question: "Funktioniert das auch bei kleinen Kanzleien?", answer: "Ja. Wir arbeiten mit Einzelkanzleien genauso wie mit Kanzlei-Netzwerken. Das System wird individuell auf deine Kanzleigröße, Region und Spezialisierung angepasst." },
+  { question: "Gewinnt ihr auch neue Mandate für mich?", answer: "Ja. Unser System umfasst sowohl Fachkräfte-Recruiting als auch Mandantengewinnung. Viele unserer Kanzleien nutzen beides — mehr Mitarbeiter bedeutet mehr Kapazität für profitable Mandate." },
+  { question: "Bin ich vertraglich gebunden?", answer: "Nein. Keine Mindestlaufzeit, kein Knebelvertrag. Unsere Kanzleien bleiben freiwillig, weil die Ergebnisse stimmen — wie die 17+ Erfolgsgeschichten zeigen." },
+  { question: "Was unterscheidet euch von Recruiting-Agenturen?", answer: "Wir sind keine klassische Recruiting-Agentur. Wir bauen ein System, das dauerhaft funktioniert — nicht nur einzelne Stellen besetzt. Dazu kombinieren wir Recruiting mit Mandantengewinnung und Prozessoptimierung." },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    generateBreadcrumbSchema([
+      { name: "Startseite", url: "/" },
+      { name: "Kanzleien", url: "/kanzleien" },
+    ]),
+    generateFAQSchema(faqs),
+  ],
+};
+---
+
+<BaseLayout
+  title={PAGE_SEO.kanzleien.title}
+  description={PAGE_SEO.kanzleien.description}
+  canonical="/kanzleien"
+  structuredData={schema}
+>
+  <KanzleienHero />
+  <KanzleienPainStack />
+  <KanzleienSystem />
+  <KanzleienCase />
+  <KanzleienOffer />
+  <KanzleienFAQ client:visible faqs={faqs} />
+
+  <!-- Big CTA -->
+  <section class="py-16 md:py-24 px-4 md:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="relative bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8 md:p-16 border border-primary/20 overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl"></div>
+        <div class="relative text-center">
+          <h2 class="section-heading mb-4">
+            Bereit für mehr <span class="gradient-text">Kanzleigewinn?</span>
+          </h2>
+          <p class="section-subheading mx-auto mb-8">
+            Buche jetzt dein kostenloses Erstgespräch und erfahre, wie du deine Kanzlei auf das nächste Level hebst.
+          </p>
+          <a href="/termin" class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-foreground shadow hover:bg-primary/90 h-12 rounded-full px-8 text-base">
+            Erstgespräch buchen
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,121 @@
+---
+const highlights = [
+  {
+    name: "Jürgen Berger",
+    company: "B&L Berger Lindzus Lutz",
+    metric: "70% Gewinnmarge",
+  },
+  {
+    name: "Marc Wüst",
+    company: "adam, wüst & partner",
+    metric: "+100% Kanzleigewinn",
+  },
+  {
+    name: "Florian Rendler",
+    company: "Rendler & Hoferer",
+    metric: "+60% Umsatz/MA",
+  },
+  {
+    name: "Peter Gilpert",
+    company: "Gilpert & Kollegen",
+    metric: "65% Gewinnmarge",
+  },
+  {
+    name: "Dr. Ralf Schauer",
+    company: "Dr. Schauer Steuerberater",
+    metric: "140+ Mitarbeiter",
+  },
+  {
+    name: "Oliver Reichelt",
+    company: "Reichelt Steuerberatung",
+    metric: "72% Gewinnmarge",
+  },
+  {
+    name: "Alfred Nelles",
+    company: "ETL Nelles & Kollegen",
+    metric: "+75% Kanzleigewinn",
+  },
+  {
+    name: "Jochen Beck",
+    company: "Beck Steuerberatung",
+    metric: "+80% Kanzleigewinn",
+  },
+];
+---
+
+<section class="bg-secondary text-secondary-foreground py-16 md:py-24 px-4 md:px-8">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <p class="text-primary font-medium mb-4">Case Study</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">
+        Quentin / Quitter &amp; Eckhardt
+      </h2>
+    </div>
+
+    <!-- Content Grid -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+      <!-- LEFT: Image -->
+      <div>
+        <div class="relative rounded-2xl overflow-hidden">
+          <img
+            src="/testimonials/christian-eckhardt.jpg"
+            alt="Christian Eckhardt, Steuerberater & Partner"
+            class="w-full h-auto rounded-2xl"
+            loading="lazy"
+          />
+        </div>
+        <div class="flex items-center gap-3 mt-4">
+          <span class="text-sm text-secondary-foreground/70">Christian Eckhardt, Steuerberater &amp; Partner</span>
+        </div>
+      </div>
+
+      <!-- RIGHT: Content -->
+      <div>
+        <!-- Vorher -->
+        <div class="rounded-xl p-5 bg-white/5 border border-white/10 mb-4">
+          <p class="text-xs font-medium uppercase tracking-wider text-destructive mb-2">Vorher</p>
+          <ul class="text-secondary-foreground/80 text-sm list-disc pl-4 space-y-1">
+            <li>Fachkräftemangel bremst Wachstum</li>
+            <li>Zu viele kleine, unprofitable Mandate</li>
+            <li>Kanzleigewinn stagniert seit Jahren</li>
+          </ul>
+        </div>
+
+        <!-- Nachher -->
+        <div class="rounded-xl p-5 bg-primary/10 border border-primary/20 mb-6">
+          <p class="text-xs font-medium uppercase tracking-wider text-primary mb-2">Nachher</p>
+          <ul class="text-secondary-foreground/90 text-sm font-medium list-disc pl-4 space-y-1">
+            <li>3 Top-Steuerfachangestellte eingestellt — alle geblieben</li>
+            <li>Kanzleigewinn um 85% gesteigert</li>
+            <li>Mandantenqualität radikal verbessert</li>
+          </ul>
+        </div>
+
+        <!-- Metric Badge -->
+        <div class="mb-6">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary font-bold">
+            +85% Kanzleigewinn &#8593;
+          </span>
+        </div>
+
+        <!-- Quote -->
+        <blockquote class="text-lg text-secondary-foreground/90 italic border-l-4 border-primary pl-4">
+          Wir haben drei Steuerfachangestellte gefunden, die alle langfristig geblieben sind. Gleichzeitig hat sich unser Kanzleigewinn fast verdoppelt.
+          <cite class="block mt-2 text-sm text-secondary-foreground/60 not-italic">— Christian Eckhardt, Steuerberater &amp; Partner</cite>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Testimonial Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {highlights.map((h) => (
+        <div class="bg-white/5 border border-white/10 rounded-xl p-4">
+          <p class="text-primary font-bold text-lg mb-1">{h.metric}</p>
+          <p class="text-white font-medium text-sm">{h.name}</p>
+          <p class="text-secondary-foreground/60 text-xs">{h.company}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

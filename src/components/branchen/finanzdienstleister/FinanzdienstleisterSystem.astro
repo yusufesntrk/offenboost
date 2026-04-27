@@ -1,0 +1,69 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Markt-Analyse",
+    description: "Wir analysieren deinen Zielmarkt, deine Positionierung und deine Konkurrenz.",
+  },
+  {
+    number: "02",
+    title: "Zielgruppen-Definition",
+    description: "Wir definieren dein ideales Mandantenprofil für maximalen Umsatz.",
+  },
+  {
+    number: "03",
+    title: "AI Content & Outreach",
+    description: "AI-gestützter Content und automatisiertes Social Selling auf LinkedIn.",
+  },
+  {
+    number: "04",
+    title: "Lead-Qualifizierung",
+    description: "Nur vorqualifizierte Leads landen in deinem Kalender.",
+  },
+  {
+    number: "05",
+    title: "Mandanten-Onboarding",
+    description: "Automatisierter Onboarding-Prozess für neue Mandanten.",
+  },
+];
+---
+
+<section class="py-16 md:py-24 px-4 md:px-8">
+  <div class="max-w-6xl mx-auto">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <p class="text-primary font-medium mb-4">So funktioniert's</p>
+      <h2 class="section-heading mb-4">
+        Das OffenBoost Social-Selling-System <span class="gradient-text">in 5 Schritten</span>
+      </h2>
+      <p class="section-subheading mx-auto">
+        Ein erprobtes System, das Finanzberater Mildenberger 47 neue Mandanten in einem Monat gebracht hat.
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="grid md:grid-cols-5 gap-8">
+      {steps.map((step, index) => (
+        <div
+          class="text-center animate-fade-in-up relative"
+          style={`animation-delay: ${index * 150}ms`}
+        >
+          <!-- Connector Line (hidden on mobile and last item) -->
+          {index < steps.length - 1 && (
+            <div class="hidden md:block absolute top-8 left-[60%] w-[80%] h-[2px] bg-gradient-to-r from-primary/30 to-transparent" />
+          )}
+
+          <div class="text-5xl font-bold text-primary/20 mb-4">
+            {step.number}
+          </div>
+          <h3 class="text-lg font-semibold text-foreground mb-2">
+            {step.title}
+          </h3>
+          <p class="text-sm text-muted-foreground">
+            {step.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

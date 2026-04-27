@@ -9,6 +9,17 @@ const navLinks = [
   { href: '/blog', label: 'Blog' },
 ];
 
+const branchenLinks = [
+  { href: '/personaldienstleister', label: 'Personaldienstleister' },
+  { href: '/kanzleien', label: 'Kanzleien' },
+  { href: '/fahrschulen', label: 'Fahrschulen' },
+  { href: '/praxen', label: 'Praxen' },
+  { href: '/finanzdienstleister', label: 'Finanzdienstleister' },
+  { href: '/restaurants', label: 'Restaurants' },
+];
+
+const isBranchenActive = branchenLinks.some(link => pathname.startsWith(link.href));
+
 function isActive(href: string): boolean {
   if (href === '/') {
     return pathname === '/';
@@ -37,7 +48,55 @@ function isActive(href: string): boolean {
 
       <!-- Navigation Links -->
       <div class="hidden md:flex items-center gap-2">
-        {navLinks.map((link) => (
+        {navLinks.slice(0, 2).map((link) => (
+          <a
+            href={link.href}
+            class={isActive(link.href) ? 'nav-link-active' : 'nav-link'}
+          >
+            {link.label}
+          </a>
+        ))}
+
+        <!-- Branchen Dropdown -->
+        <div class="relative" id="branchen-dropdown">
+          <button
+            type="button"
+            class:list={[
+              'flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer',
+              isBranchenActive
+                ? 'bg-primary/10 text-primary'
+                : 'text-muted-foreground hover:text-foreground hover:bg-muted',
+            ]}
+            id="branchen-trigger"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            Branchen
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform" id="branchen-chevron">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+          <div
+            id="branchen-panel"
+            class="absolute top-full left-0 mt-2 w-56 bg-card rounded-xl border border-border/50 shadow-xl py-2 opacity-0 invisible transition-all duration-200 z-50"
+          >
+            {branchenLinks.map((link) => (
+              <a
+                href={link.href}
+                class:list={[
+                  'block px-4 py-2.5 text-sm font-medium transition-colors',
+                  isActive(link.href)
+                    ? 'bg-primary/10 text-primary'
+                    : 'text-secondary hover:bg-muted hover:text-foreground',
+                ]}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {navLinks.slice(2).map((link) => (
           <a
             href={link.href}
             class={isActive(link.href) ? 'nav-link-active' : 'nav-link'}
@@ -85,7 +144,57 @@ function isActive(href: string): boolean {
       style="max-height: 0; opacity: 0;"
     >
       <div class="flex flex-col gap-1 pt-3 pb-4 px-2">
-        {navLinks.map((link) => (
+        {navLinks.slice(0, 2).map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'mobile-nav-link block rounded-xl px-4 py-3 text-base font-medium transition-colors',
+              isActive(link.href)
+                ? 'bg-primary/10 text-primary'
+                : 'text-secondary hover:bg-muted',
+            ]}
+          >
+            {link.label}
+          </a>
+        ))}
+
+        <!-- Branchen (Mobile) -->
+        <div>
+          <button
+            type="button"
+            id="mobile-branchen-toggle"
+            class:list={[
+              'w-full flex items-center justify-between rounded-xl px-4 py-3 text-base font-medium transition-colors cursor-pointer',
+              isBranchenActive
+                ? 'bg-primary/10 text-primary'
+                : 'text-secondary hover:bg-muted',
+            ]}
+          >
+            Branchen
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform" id="mobile-branchen-chevron">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+          <div id="mobile-branchen-list" class="overflow-hidden transition-all duration-300" style="max-height: 0; opacity: 0;">
+            <div class="pl-4 flex flex-col gap-1 pt-1">
+              {branchenLinks.map((link) => (
+                <a
+                  href={link.href}
+                  class:list={[
+                    'mobile-nav-link block rounded-xl px-4 py-2.5 text-sm font-medium transition-colors',
+                    isActive(link.href)
+                      ? 'bg-primary/10 text-primary'
+                      : 'text-muted-foreground hover:bg-muted hover:text-secondary',
+                  ]}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {navLinks.slice(2).map((link) => (
           <a
             href={link.href}
             class:list={[
@@ -151,11 +260,75 @@ function isActive(href: string): boolean {
       }
     });
 
-    // Close menu when a link is clicked
     mobileLinks?.forEach((link) => {
       link.addEventListener('click', () => {
         closeMenu();
       });
     });
+
+    // Desktop Branchen Dropdown
+    var branchenDropdown = document.getElementById('branchen-dropdown');
+    var branchenTrigger = document.getElementById('branchen-trigger');
+    var branchenPanel = document.getElementById('branchen-panel');
+    var branchenChevron = document.getElementById('branchen-chevron');
+
+    if (branchenDropdown && branchenTrigger && branchenPanel) {
+      var dropdownOpen = false;
+
+      function showDropdown() {
+        dropdownOpen = true;
+        branchenPanel.style.opacity = '1';
+        branchenPanel.style.visibility = 'visible';
+        branchenPanel.style.transform = 'translateY(0)';
+        if (branchenChevron) branchenChevron.style.transform = 'rotate(180deg)';
+        branchenTrigger.setAttribute('aria-expanded', 'true');
+      }
+
+      function hideDropdown() {
+        dropdownOpen = false;
+        branchenPanel.style.opacity = '0';
+        branchenPanel.style.visibility = 'hidden';
+        branchenPanel.style.transform = 'translateY(-4px)';
+        if (branchenChevron) branchenChevron.style.transform = 'rotate(0deg)';
+        branchenTrigger.setAttribute('aria-expanded', 'false');
+      }
+
+      branchenPanel.style.transform = 'translateY(-4px)';
+
+      branchenDropdown.addEventListener('mouseenter', showDropdown);
+      branchenDropdown.addEventListener('mouseleave', hideDropdown);
+
+      branchenTrigger.addEventListener('click', function() {
+        if (dropdownOpen) { hideDropdown(); } else { showDropdown(); }
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!branchenDropdown.contains(e.target)) hideDropdown();
+      });
+    }
+
+    // Mobile Branchen Toggle
+    var mobileBranchenToggle = document.getElementById('mobile-branchen-toggle');
+    var mobileBranchenList = document.getElementById('mobile-branchen-list');
+    var mobileBranchenChevron = document.getElementById('mobile-branchen-chevron');
+
+    if (mobileBranchenToggle && mobileBranchenList) {
+      var mobileBranchenOpen = false;
+
+      mobileBranchenToggle.addEventListener('click', function() {
+        mobileBranchenOpen = !mobileBranchenOpen;
+        if (mobileBranchenOpen) {
+          mobileBranchenList.style.maxHeight = mobileBranchenList.scrollHeight + 'px';
+          mobileBranchenList.style.opacity = '1';
+          if (mobileBranchenChevron) mobileBranchenChevron.style.transform = 'rotate(180deg)';
+          // Recalculate parent menu height
+          if (menu) menu.style.maxHeight = menu.scrollHeight + mobileBranchenList.scrollHeight + 'px';
+        } else {
+          mobileBranchenList.style.maxHeight = '0';
+          mobileBranchenList.style.opacity = '0';
+          if (mobileBranchenChevron) mobileBranchenChevron.style.transform = 'rotate(0deg)';
+        }
+      });
+    }
   });
 </script>

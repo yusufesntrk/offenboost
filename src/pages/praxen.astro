@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { PAGE_SEO } from '../lib/seo-config';
+import { generateBreadcrumbSchema, generateFAQSchema } from '../lib/structured-data';
+
+import PraxenHero from '../components/branchen/praxen/PraxenHero.astro';
+import PraxenPainStack from '../components/branchen/praxen/PraxenPainStack.astro';
+import PraxenSystem from '../components/branchen/praxen/PraxenSystem.astro';
+import PraxenCase from '../components/branchen/praxen/PraxenCase.astro';
+import PraxenOffer from '../components/branchen/praxen/PraxenOffer.astro';
+import PraxenFAQ from '../components/branchen/praxen/PraxenFAQ';
+
+const faqs = [
+  { question: "Was kostet die Zusammenarbeit?", answer: "Die Kosten hängen vom Umfang ab — ob nur Marketing oder auch Praxisautomation. Im kostenlosen Erstgespräch analysieren wir deine Situation und erstellen ein individuelles Angebot." },
+  { question: "Wie schnell sehe ich mehr Patienten?", answer: "Die meisten Praxen sehen erste neue Patientenanfragen innerhalb von 2-3 Wochen nach Kampagnenstart. Der KI-Telefonassistent ist in wenigen Tagen eingerichtet." },
+  { question: "Funktioniert das auch für Fachärzte?", answer: "Ja. Wir arbeiten mit Zahnärzten, Orthopäden, Dermatologen, Augenärzten und vielen weiteren Fachrichtungen. Das System wird individuell auf deine Fachrichtung und Region angepasst." },
+  { question: "Was ist der KI-Telefonassistent?", answer: "Ein intelligenter Assistent, der Patientenanrufe automatisch beantwortet, Termine bucht und FAQs klärt — 24/7, ohne Wartezeit. 80% der Routineanrufe werden vollautomatisch abgewickelt." },
+  { question: "Bin ich vertraglich gebunden?", answer: "Nein. Keine Mindestlaufzeit, kein Knebelvertrag. Wir glauben an unsere Ergebnisse, nicht an Knebelverträge." },
+  { question: "Brauche ich technische Vorkenntnisse?", answer: "Nein. Wir richten alles ein und kümmern uns um die Technik. Du und dein Team müsst nur noch die neuen Patienten behandeln." },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    generateBreadcrumbSchema([
+      { name: "Startseite", url: "/" },
+      { name: "Praxen", url: "/praxen" },
+    ]),
+    generateFAQSchema(faqs),
+  ],
+};
+---
+
+<BaseLayout
+  title={PAGE_SEO.praxen.title}
+  description={PAGE_SEO.praxen.description}
+  canonical="/praxen"
+  structuredData={schema}
+>
+  <PraxenHero />
+  <PraxenPainStack />
+  <PraxenSystem />
+  <PraxenCase />
+  <PraxenOffer />
+  <PraxenFAQ client:visible faqs={faqs} />
+
+  <section class="py-16 md:py-24 px-4 md:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="relative bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8 md:p-16 border border-primary/20 overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl"></div>
+        <div class="relative text-center">
+          <h2 class="section-heading mb-4">Bereit für mehr <span class="gradient-text">Patienten?</span></h2>
+          <p class="section-subheading mx-auto mb-8">Buche jetzt dein kostenloses Erstgespräch und erfahre, wie du deine Praxis auslastest.</p>
+          <a href="/termin" class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-foreground shadow hover:bg-primary/90 h-12 rounded-full px-8 text-base">
+            Erstgespräch buchen
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

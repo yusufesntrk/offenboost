@@ -9,7 +9,6 @@ import SchilleSystem from '../components/fahrschulen/SchilleSystem.astro';
 import SchilleCase from '../components/fahrschulen/SchilleCase.astro';
 import FahrschulenOffer from '../components/fahrschulen/FahrschulenOffer.astro';
 
-import AuditForm from '../components/fahrschulen/AuditForm';
 import FahrschulenFAQ from '../components/fahrschulen/FahrschulenFAQ';
 
 const fahrschulenFAQs = [
@@ -44,7 +43,6 @@ const fahrschulenSchema = {
   <SchilleSystem />
   <SchilleCase />
   <FahrschulenOffer />
-  <AuditForm client:visible />
   <FahrschulenFAQ client:visible faqs={fahrschulenFAQs} />
 
   <!-- Big CTA -->
@@ -58,13 +56,13 @@ const fahrschulenSchema = {
             Bereit für mehr <span class="gradient-text">Fahrschüler?</span>
           </h2>
           <p class="section-subheading mx-auto mb-8">
-            Fordere jetzt dein kostenloses Audit an und erfahre, wie viele Fahrschüler in deiner Stadt auf dich warten.
+            Buche jetzt dein kostenloses Erstgespräch und erfahre, wie viele Fahrschüler in deiner Stadt auf dich warten.
           </p>
           <a
-            href="#audit-form"
+            href="/termin"
             class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-foreground shadow hover:bg-primary/90 h-12 rounded-full px-8 text-base"
           >
-            Gratis Audit anfordern
+            Erstgespräch buchen
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>

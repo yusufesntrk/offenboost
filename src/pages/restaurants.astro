@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { PAGE_SEO } from '../lib/seo-config';
+import { generateBreadcrumbSchema, generateFAQSchema } from '../lib/structured-data';
+
+import RestaurantsHero from '../components/branchen/restaurants/RestaurantsHero.astro';
+import RestaurantsPainStack from '../components/branchen/restaurants/RestaurantsPainStack.astro';
+import RestaurantsSystem from '../components/branchen/restaurants/RestaurantsSystem.astro';
+import RestaurantsCase from '../components/branchen/restaurants/RestaurantsCase.astro';
+import RestaurantsOffer from '../components/branchen/restaurants/RestaurantsOffer.astro';
+import RestaurantsFAQ from '../components/branchen/restaurants/RestaurantsFAQ';
+
+const faqs = [
+  { question: "Was kostet die Zusammenarbeit?", answer: "Die Kosten hängen vom Umfang ab. Im kostenlosen Erstgespräch analysieren wir deine Situation und erstellen ein individuelles Angebot — abgestimmt auf dein Restaurant und deine Ziele." },
+  { question: "Wie schnell sehe ich mehr Gäste?", answer: "Die meisten Restaurants sehen erste Ergebnisse innerhalb von 2-4 Wochen. Google-Optimierung braucht etwas länger, aber Social-Media-Kampagnen und Bewertungsmanagement wirken schnell." },
+  { question: "Funktioniert das auch für kleine Imbisse?", answer: "Ja. Wir arbeiten mit Fine-Dining-Restaurants genauso wie mit Imbissen und Cafés. Das System wird individuell auf dein Konzept und deine Region angepasst." },
+  { question: "Muss ich selbst Fotos machen?", answer: "Wir arbeiten mit dem Material, das du hast. Wenn nötig, geben wir dir einfache Anleitungen für Food-Fotos mit dem Handy — kein Profi-Equipment nötig." },
+  { question: "Bin ich vertraglich gebunden?", answer: "Nein. Keine Mindestlaufzeit, kein Knebelvertrag. Unsere Restaurants bleiben freiwillig, weil die Ergebnisse stimmen." },
+  { question: "Brauche ich ein Reservierungssystem?", answer: "Nicht unbedingt. Wir arbeiten mit bestehenden Systemen oder helfen dir bei der Einrichtung. Auch ohne Online-Reservierung können wir deine Sichtbarkeit und Gästefrequenz steigern." },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    generateBreadcrumbSchema([
+      { name: "Startseite", url: "/" },
+      { name: "Restaurants", url: "/restaurants" },
+    ]),
+    generateFAQSchema(faqs),
+  ],
+};
+---
+
+<BaseLayout
+  title={PAGE_SEO.restaurants.title}
+  description={PAGE_SEO.restaurants.description}
+  canonical="/restaurants"
+  structuredData={schema}
+>
+  <RestaurantsHero />
+  <RestaurantsPainStack />
+  <RestaurantsSystem />
+  <RestaurantsCase />
+  <RestaurantsOffer />
+  <RestaurantsFAQ client:visible faqs={faqs} />
+
+  <section class="py-16 md:py-24 px-4 md:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="relative bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8 md:p-16 border border-primary/20 overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl"></div>
+        <div class="relative text-center">
+          <h2 class="section-heading mb-4">Bereit für mehr <span class="gradient-text">Gäste?</span></h2>
+          <p class="section-subheading mx-auto mb-8">Buche jetzt dein kostenloses Erstgespräch und erfahre, wie du dein Restaurant auslastest.</p>
+          <a href="/termin" class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-foreground shadow hover:bg-primary/90 h-12 rounded-full px-8 text-base">
+            Erstgespräch buchen
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { PAGE_SEO } from '../lib/seo-config';
+import { generateBreadcrumbSchema, generateFAQSchema } from '../lib/structured-data';
+
+import FinanzdienstleisterHero from '../components/branchen/finanzdienstleister/FinanzdienstleisterHero.astro';
+import FinanzdienstleisterPainStack from '../components/branchen/finanzdienstleister/FinanzdienstleisterPainStack.astro';
+import FinanzdienstleisterSystem from '../components/branchen/finanzdienstleister/FinanzdienstleisterSystem.astro';
+import FinanzdienstleisterCase from '../components/branchen/finanzdienstleister/FinanzdienstleisterCase.astro';
+import FinanzdienstleisterOffer from '../components/branchen/finanzdienstleister/FinanzdienstleisterOffer.astro';
+import FinanzdienstleisterFAQ from '../components/branchen/finanzdienstleister/FinanzdienstleisterFAQ';
+
+const faqs = [
+  { question: "Was kostet die Zusammenarbeit?", answer: "Unsere Vergütung ist ergebnisorientiert. Im kostenlosen Erstgespräch analysieren wir deine Situation und erstellen ein individuelles Angebot — kein Risiko für dich." },
+  { question: "Wie schnell kommen neue Mandanten?", answer: "Die meisten Finanzberater sehen erste qualifizierte Anfragen innerhalb von 2-3 Wochen. Das Social-Selling-System läuft nach 14 Tagen Einrichtung." },
+  { question: "Funktioniert das auch für Versicherungsmakler?", answer: "Ja. Wir arbeiten mit Finanzberatern, Versicherungsmaklern, Vermögensverwaltern und Bankberatern. Das System wird individuell auf dein Segment angepasst." },
+  { question: "Muss ich selbst Content erstellen?", answer: "Nein. Unser AI-gestütztes System erstellt und veröffentlicht Content automatisch. Du musst nur die neuen Mandanten beraten." },
+  { question: "Bin ich vertraglich gebunden?", answer: "Nein. Keine Mindestlaufzeit, kein Knebelvertrag. Wir glauben an unsere Ergebnisse, nicht an Knebelverträge." },
+  { question: "Was unterscheidet euch von Marketing-Agenturen?", answer: "Wir verstehen die Finanzbranche und ihre regulatorischen Anforderungen. Unser System ist keine generische Lösung, sondern speziell für die Herausforderungen von Finanzdienstleistern gebaut — inklusive Compliance-konformem Content." },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    generateBreadcrumbSchema([
+      { name: "Startseite", url: "/" },
+      { name: "Finanzdienstleister", url: "/finanzdienstleister" },
+    ]),
+    generateFAQSchema(faqs),
+  ],
+};
+---
+
+<BaseLayout
+  title={PAGE_SEO.finanzdienstleister.title}
+  description={PAGE_SEO.finanzdienstleister.description}
+  canonical="/finanzdienstleister"
+  structuredData={schema}
+>
+  <FinanzdienstleisterHero />
+  <FinanzdienstleisterPainStack />
+  <FinanzdienstleisterSystem />
+  <FinanzdienstleisterCase />
+  <FinanzdienstleisterOffer />
+  <FinanzdienstleisterFAQ client:visible faqs={faqs} />
+
+  <section class="py-16 md:py-24 px-4 md:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="relative bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8 md:p-16 border border-primary/20 overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl"></div>
+        <div class="relative text-center">
+          <h2 class="section-heading mb-4">Bereit für mehr <span class="gradient-text">Mandanten?</span></h2>
+          <p class="section-subheading mx-auto mb-8">Buche jetzt dein kostenloses Erstgespräch und erfahre, wie du deine Mandantengewinnung automatisierst.</p>
+          <a href="/termin" class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-foreground shadow hover:bg-primary/90 h-12 rounded-full px-8 text-base">
+            Erstgespräch buchen
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

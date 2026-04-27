@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { PAGE_SEO } from '../lib/seo-config';
+import { generateBreadcrumbSchema, generateFAQSchema } from '../lib/structured-data';
+
+import PersonaldienstleisterHero from '../components/branchen/personaldienstleister/PersonaldienstleisterHero.astro';
+import PersonaldienstleisterPainStack from '../components/branchen/personaldienstleister/PersonaldienstleisterPainStack.astro';
+import PersonaldienstleisterSystem from '../components/branchen/personaldienstleister/PersonaldienstleisterSystem.astro';
+import PersonaldienstleisterCase from '../components/branchen/personaldienstleister/PersonaldienstleisterCase.astro';
+import PersonaldienstleisterOffer from '../components/branchen/personaldienstleister/PersonaldienstleisterOffer.astro';
+import PersonaldienstleisterFAQ from '../components/branchen/personaldienstleister/PersonaldienstleisterFAQ';
+
+const faqs = [
+  {
+    question: "Was kostet die Zusammenarbeit?",
+    answer: "Unsere Vergütung ist performance-basiert — du zahlst nur für messbare Ergebnisse. Keine Setup-Gebühren, keine monatlichen Pauschalen. Die genauen Konditionen besprechen wir im kostenlosen Erstgespräch.",
+  },
+  {
+    question: "Wie schnell sehe ich Ergebnisse?",
+    answer: "Dein Sales-System steht innerhalb von 14 Tagen. Die meisten Agenturen sehen erste qualifizierte Leads bereits in der ersten Woche nach Go-Live.",
+  },
+  {
+    question: "Funktioniert das auch in meiner Nische?",
+    answer: "Ja. Wir arbeiten mit Recruiting-Agenturen aus allen Bereichen: IT, Finance, Healthcare, Engineering, Executive Search. Das System wird individuell auf deine Nische und Zielgruppe angepasst.",
+  },
+  {
+    question: "Muss ich meinen aktuellen Prozess komplett umstellen?",
+    answer: "Nein. Wir bauen auf deinem bestehenden Prozess auf und ergänzen ihn um automatisierte Komponenten. Du behältst die volle Kontrolle.",
+  },
+  {
+    question: "Bin ich vertraglich gebunden?",
+    answer: "Nein. Keine Mindestlaufzeit, kein Knebelvertrag. Wir arbeiten performance-basiert — wenn die Ergebnisse stimmen, bleibst du freiwillig.",
+  },
+  {
+    question: "Was unterscheidet euch von anderen Agenturen?",
+    answer: "Wir sind selbst im Recruiting-Markt zuhause und kennen die Pain Points aus erster Hand. Unser System ist keine generische Marketing-Lösung, sondern speziell für die Herausforderungen von Personaldienstleistern gebaut.",
+  },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    generateBreadcrumbSchema([
+      { name: "Startseite", url: "/" },
+      { name: "Personaldienstleister", url: "/personaldienstleister" },
+    ]),
+    generateFAQSchema(faqs),
+  ],
+};
+---
+
+<BaseLayout
+  title={PAGE_SEO.personaldienstleister.title}
+  description={PAGE_SEO.personaldienstleister.description}
+  canonical="/personaldienstleister"
+  structuredData={schema}
+>
+  <PersonaldienstleisterHero />
+  <PersonaldienstleisterPainStack />
+  <PersonaldienstleisterSystem />
+  <PersonaldienstleisterCase />
+  <PersonaldienstleisterOffer />
+  <PersonaldienstleisterFAQ client:visible faqs={faqs} />
+
+  <!-- Big CTA -->
+  <section class="py-16 md:py-24 px-4 md:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="relative bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8 md:p-16 border border-primary/20 overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl"></div>
+        <div class="relative text-center">
+          <h2 class="section-heading mb-4">
+            Bereit für mehr <span class="gradient-text">Aufträge?</span>
+          </h2>
+          <p class="section-subheading mx-auto mb-8">
+            Buche jetzt dein kostenloses Erstgespräch und erfahre, wie du deine Sales-Pipeline automatisierst.
+          </p>
+          <a href="/termin" class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-foreground shadow hover:bg-primary/90 h-12 rounded-full px-8 text-base">
+            Erstgespräch buchen
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

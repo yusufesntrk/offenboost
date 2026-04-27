@@ -90,6 +90,31 @@ export const PAGE_SEO = {
     description: "Wie Fahrschule Schille mit OffenBoost 50 neue Fahrschüler in 30 Tagen gewonnen hat. 175.000€ Umsatz. Provisionsbasis — du zahlst nur pro Fahrschüler.",
     keywords: "Fahrschul Marketing, Fahrschüler gewinnen, Meta Ads Fahrschule, Fahrschule Werbung, Fahrschüler Akquise, Fahrschule Online Marketing",
   },
+  personaldienstleister: {
+    title: "Mehr Aufträge für Recruiting-Agenturen | OffenBoost",
+    description: "Wie Recruiting-Agenturen mit OffenBoost ihre Sales-Pipeline automatisieren und mehr Aufträge gewinnen. 200k Upfront Fee, +300% Sales-Output, 5x ROI.",
+    keywords: "Recruiting Agentur wachsen, Personaldienstleister Marketing, Sales Automatisierung Recruiting, Mehr Aufträge Personalvermittlung, Recruiting Sales System",
+  },
+  kanzleien: {
+    title: "Kanzlei-Marketing: Mehr Gewinn & Top-Fachkräfte | OffenBoost",
+    description: "Wie Steuerkanzleien mit OffenBoost ihren Gewinn verdoppeln und Top-Fachkräfte finden. +85% Kanzleigewinn, 70% Gewinnmarge, Premium-Mandate.",
+    keywords: "Kanzlei Marketing, Steuerkanzlei Wachstum, Mandanten gewinnen, Steuerfachangestellte finden, Kanzlei Gewinnoptimierung, Kanzleimarketing",
+  },
+  praxen: {
+    title: "Praxis-Marketing: +140% mehr Neupatientenanfragen | OffenBoost",
+    description: "Wie Arztpraxen mit OffenBoost ihre Neupatientenanfragen um 140% steigern und ihre Praxisverwaltung automatisieren. KI-Telefonassistent inklusive.",
+    keywords: "Praxis Marketing, Neupatientengewinnung, Zahnarzt Marketing, Arztpraxis Werbung, Praxis Automatisierung, Online Marketing Arztpraxis",
+  },
+  finanzdienstleister: {
+    title: "Finanzberater-Marketing: +47 Mandanten/Monat | OffenBoost",
+    description: "Wie Finanzdienstleister mit OffenBoost 47 neue Mandanten pro Monat gewinnen. AI-gestütztes Social Selling und automatisierte Lead-Generierung.",
+    keywords: "Finanzberater Marketing, Mandanten gewinnen Finanzberatung, Social Selling Finanzdienstleister, Lead Generierung Finanzberater",
+  },
+  restaurants: {
+    title: "Restaurant-Marketing: +210% Online-Reservierungen | OffenBoost",
+    description: "Wie Restaurants mit OffenBoost ihre Online-Reservierungen um 210% steigern. Google-Sichtbarkeit, Bewertungsmanagement und digitale Präsenz.",
+    keywords: "Restaurant Marketing, Online Reservierungen steigern, Google Bewertungen Restaurant, Restaurant Werbung, Gastronomie Marketing",
+  },
   notFound: {
     title: "Seite nicht gefunden | OffenBoost",
     description: "Die angeforderte Seite wurde nicht gefunden.",

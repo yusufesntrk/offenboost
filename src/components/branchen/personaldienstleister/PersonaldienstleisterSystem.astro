@@ -1,0 +1,69 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Sales-Analyse",
+    description: "Wir analysieren deinen Sales-Prozess, Zielmarkt und Wettbewerber.",
+  },
+  {
+    number: "02",
+    title: "Positionierung",
+    description: "Scharfe Nischen-Positionierung, die dich vom Markt abhebt.",
+  },
+  {
+    number: "03",
+    title: "Outreach-System",
+    description: "Automatisierte Multi-Channel-Akquise auf LinkedIn, E-Mail und Telefon.",
+  },
+  {
+    number: "04",
+    title: "Qualifizierung",
+    description: "Nur warme Leads landen in deiner Pipeline — kein Zeitverlust.",
+  },
+  {
+    number: "05",
+    title: "Skalierung",
+    description: "Laufende Optimierung und Expansion in neue Branchen und Märkte.",
+  },
+];
+---
+
+<section class="py-16 md:py-24 px-4 md:px-8">
+  <div class="max-w-6xl mx-auto">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <p class="text-primary font-medium mb-4">So funktioniert's</p>
+      <h2 class="section-heading mb-4">
+        Das OffenBoost Sales-System <span class="gradient-text">in 5 Schritten</span>
+      </h2>
+      <p class="section-subheading mx-auto">
+        Ein erprobtes System, das Recruiting-Agenturen zu Sales-Maschinen macht.
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="grid md:grid-cols-5 gap-8">
+      {steps.map((step, index) => (
+        <div
+          class="text-center animate-fade-in-up relative"
+          style={`animation-delay: ${index * 150}ms`}
+        >
+          <!-- Connector Line (hidden on mobile and last item) -->
+          {index < steps.length - 1 && (
+            <div class="hidden md:block absolute top-8 left-[60%] w-[80%] h-[2px] bg-gradient-to-r from-primary/30 to-transparent" />
+          )}
+
+          <div class="text-5xl font-bold text-primary/20 mb-4">
+            {step.number}
+          </div>
+          <h3 class="text-lg font-semibold text-foreground mb-2">
+            {step.title}
+          </h3>
+          <p class="text-sm text-muted-foreground">
+            {step.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
