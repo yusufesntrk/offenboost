@@ -145,6 +145,117 @@ export const generateBreadcrumbSchema = (
   })),
 });
 
+// WebPage Schema generator for canonical landing pages
+export const generateWebPageSchema = ({
+  path,
+  title,
+  description,
+  keywords,
+  mainEntityId,
+  breadcrumbId,
+  image,
+}: {
+  path: string;
+  title: string;
+  description: string;
+  keywords?: string;
+  mainEntityId?: string;
+  breadcrumbId?: string;
+  image?: string;
+}) => {
+  const url = `${SITE_CONFIG.url}${path}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: title,
+    description,
+    inLanguage: SITE_CONFIG.language,
+    isPartOf: {
+      "@id": `${SITE_CONFIG.url}/#website`,
+    },
+    about: {
+      "@id": `${SITE_CONFIG.url}/#organization`,
+    },
+    ...(keywords ? { keywords } : {}),
+    ...(mainEntityId ? { mainEntity: { "@id": mainEntityId } } : {}),
+    ...(breadcrumbId ? { breadcrumb: { "@id": breadcrumbId } } : {}),
+    ...(image
+      ? {
+          primaryImageOfPage: {
+            "@type": "ImageObject",
+            url: image.startsWith("http") ? image : `${SITE_CONFIG.url}${image}`,
+          },
+        }
+      : {}),
+  };
+};
+
+// Service Schema generator for service and industry landing pages
+export const generateServicePageSchema = ({
+  path,
+  name,
+  description,
+  serviceType,
+  audience,
+  areaServed = "Germany",
+  hasOfferCatalog,
+}: {
+  path: string;
+  name: string;
+  description: string;
+  serviceType: string;
+  audience?: string;
+  areaServed?: string;
+  hasOfferCatalog?: { name: string; description: string }[];
+}) => {
+  const url = `${SITE_CONFIG.url}${path}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${url}#service`,
+    name,
+    url,
+    description,
+    serviceType,
+    provider: {
+      "@id": `${SITE_CONFIG.url}/#organization`,
+    },
+    areaServed: {
+      "@type": "Country",
+      name: areaServed,
+    },
+    ...(audience
+      ? {
+          audience: {
+            "@type": "Audience",
+            audienceType: audience,
+          },
+        }
+      : {}),
+    ...(hasOfferCatalog
+      ? {
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: `${name} Leistungen`,
+            itemListElement: hasOfferCatalog.map((item, index) => ({
+              "@type": "Offer",
+              position: index + 1,
+              itemOffered: {
+                "@type": "Service",
+                name: item.name,
+                description: item.description,
+              },
+            })),
+          },
+        }
+      : {}),
+  };
+};
+
 // FAQ Schema generator (for FAQ sections)
 export const generateFAQSchema = (
   faqs: { question: string; answer: string }[]

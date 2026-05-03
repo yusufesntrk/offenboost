@@ -86,9 +86,9 @@ export const PAGE_SEO = {
     keywords: "Blog, Recruiting Tipps, Marketing KMU, Automatisierung, Fachkräftemangel, Wachstum",
   },
   fahrschulen: {
-    title: "Fahrschul-Marketing: 50 neue Fahrschüler in 30 Tagen | OffenBoost",
-    description: "Wie Fahrschule Schille mit OffenBoost 50 neue Fahrschüler in 30 Tagen gewonnen hat. 175.000€ Umsatz. Provisionsbasis — du zahlst nur pro Fahrschüler.",
-    keywords: "Fahrschul Marketing, Fahrschüler gewinnen, Meta Ads Fahrschule, Fahrschule Werbung, Fahrschüler Akquise, Fahrschule Online Marketing",
+    title: "Fahrschul-Marketing & Fahrlehrer gewinnen | OffenBoost",
+    description: "Fahrschul-Marketing für mehr Fahrschüler und Fahrlehrer-Anfragen: Meta Ads, Landingpage und Follow-up auf Provisionsbasis. Kostenloses Audit buchen.",
+    keywords: "Fahrschul Marketing, Fahrschüler gewinnen, Fahrlehrer gewinnen, Meta Ads Fahrschule, Fahrschule Werbung, Fahrschüler Akquise, Fahrschule Online Marketing",
   },
   personaldienstleister: {
     title: "Mehr Aufträge für Recruiting-Agenturen | OffenBoost",
