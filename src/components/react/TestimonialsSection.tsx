@@ -194,6 +194,27 @@ const testimonials: Testimonial[] = [
       "80% weniger Fulfillment-Aufwand durch ATS-Automatisierung",
     ],
   },
+  {
+    quote: "Mit OffenBoost haben wir endlich alles an einem Ort. Wir brauchen keine zusätzlichen Tools mehr und steuern unseren gesamten Sales- und Recruiting-Prozess zentral in einem System.",
+    name: "Sinan Tarti",
+    role: "Manager Digital Process Automation",
+    company: "PolyTALENT GmbH",
+    image: "/testimonials/sinan-tarti.jpg",
+    category: "recruiting",
+    metric: {
+      label: "Tool-Stack",
+      value: 70,
+      suffix: "%",
+      prefix: "-",
+      direction: "down",
+      description: "konsolidiert",
+    },
+    results: [
+      "Gesamter Sales- und Recruiting-Prozess in einem System gebündelt",
+      "Tool-Stack drastisch reduziert – kein Daten-Silo mehr",
+      "Digitale Prozessautomatisierung von Akquise bis Vermittlung",
+    ],
+  },
   // Kanzleien
   {
     quote: "Innerhalb von 4 Wochen hatten wir die Steuerfachangestellte eingestellt, die wir seit Monaten gesucht haben. Gleichzeitig haben sich unsere Neumandate verdoppelt.",

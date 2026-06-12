@@ -203,6 +203,29 @@ const caseStudies: CaseStudy[] = [
       description: "im ersten Quartal"
     },
   },
+  {
+    name: "Sinan Tarti",
+    role: "Manager Digital Process Automation",
+    company: "PolyTALENT GmbH",
+    image: "/testimonials/sinan-tarti.jpg",
+    quote: "Mit OffenBoost haben wir endlich alles an einem Ort. Wir brauchen keine zusätzlichen Tools mehr und steuern unseren gesamten Sales- und Recruiting-Prozess zentral in einem System.",
+    headline: "Tool-Stack um 70% reduziert und gesamten Sales- & Recruiting-Prozess zentralisiert",
+    category: "recruiting",
+    results: [
+      "Gesamter Sales- und Recruiting-Prozess in einem System gebündelt",
+      "Tool-Stack um 70% konsolidiert – Schluss mit Daten-Silos",
+      "Digitale Prozessautomatisierung von Akquise bis Vermittlung",
+      "Manager Digital Process Automation kann sich auf Skalierung statt Tool-Pflege fokussieren",
+    ],
+    metric: {
+      label: "Tool-Stack",
+      value: 70,
+      suffix: "%",
+      prefix: "-",
+      direction: "down",
+      description: "konsolidiert"
+    },
+  },
   // Kanzleien
   {
     name: "Jürgen Berger",
