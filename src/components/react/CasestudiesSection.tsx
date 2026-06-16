@@ -668,6 +668,28 @@ const caseStudies: CaseStudy[] = [
       description: "Return on Investment"
     },
   },
+  {
+    name: "Naud Tshaie",
+    role: "Inhaber",
+    company: "Fahrschule N2K",
+    quote: "OffenBoost ist das beste Marketing in Offenburg, das uns je passiert ist. In zwei Monaten haben wir 40 neue Fahrschüler gewonnen und unsere Online-Präsenz hat sich um 80% gesteigert.",
+    headline: "40 neue Fahrschüler in 2 Monaten und +80% Online-Präsenz in Offenburg",
+    category: "fahrschulen",
+    results: [
+      "40 neue Fahrschüler-Anmeldungen in nur 2 Monaten",
+      "Online-Präsenz um 80% gesteigert",
+      "Lokale Marktführerschaft im Raum Offenburg ausgebaut",
+      "Automatisierte Lead-Strecke von Anfrage bis Anmeldung",
+    ],
+    metric: {
+      label: "Neue Fahrschüler",
+      value: 40,
+      suffix: "",
+      prefix: "+",
+      direction: "up",
+      description: "in nur 2 Monaten"
+    },
+  },
   // Praxen
   {
     name: "Dr. Schmidt",

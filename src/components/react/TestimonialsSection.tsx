@@ -617,6 +617,26 @@ const testimonials: Testimonial[] = [
       "Neue Fahrlehrer gewonnen trotz Fachkräftemangel",
     ],
   },
+  {
+    quote: "OffenBoost ist das beste Marketing in Offenburg, das uns je passiert ist. In zwei Monaten haben wir 40 neue Fahrschüler gewonnen und unsere Online-Präsenz hat sich um 80% gesteigert.",
+    name: "Naud Tshaie",
+    role: "Inhaber",
+    company: "Fahrschule N2K",
+    category: "fahrschulen",
+    metric: {
+      label: "Neue Fahrschüler",
+      value: 40,
+      suffix: "",
+      prefix: "+",
+      direction: "up",
+      description: "in nur 2 Monaten",
+    },
+    results: [
+      "40 neue Fahrschüler in 2 Monaten gewonnen",
+      "Online-Präsenz um 80% gesteigert",
+      "Stärkstes Marketing-Ergebnis im Raum Offenburg",
+    ],
+  },
   // Praxen
   {
     quote: "Durch OffenBoost haben wir nicht nur deutlich mehr Patienten gewonnen, sondern auch unsere komplette Praxisverwaltung automatisiert. Telefonassistent, Online-Anmeldung, E-Mail-Automation – wir sparen Stunden an Bürokratie jeden Tag.",
